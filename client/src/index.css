@@ -29,6 +29,8 @@
   --iedc-light-blue: hsl(217, 91%, 60%);
   --iedc-gray: hsl(217, 33%, 17%);
   --iedc-light-gray: hsl(220, 14%, 97%);
+  --iedc-bg-blue: hsl(220, 45%, 85%);
+  --iedc-primary-blue: hsl(222, 84%, 35%);
 }
 
 .dark {
@@ -95,5 +97,13 @@
   
   .bg-iedc-light-gray {
     background-color: var(--iedc-light-gray);
+  }
+  
+  .bg-iedc-bg-blue {
+    background-color: var(--iedc-bg-blue);
+  }
+  
+  .bg-iedc-primary-blue {
+    background-color: var(--iedc-primary-blue);
   }
 }
