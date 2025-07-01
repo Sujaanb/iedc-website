@@ -1,0 +1,108 @@
+# IEDC IEM Salt Lake - Innovation and Entrepreneurship Development Center
+
+## Overview
+
+This is a full-stack web application for the Innovation and Entrepreneurship Development Center (IEDC) at IEM Salt Lake. The application serves as a comprehensive digital platform showcasing the center's mission, team, incubated startups, and activities. Built with modern web technologies, it provides an engaging user experience with a professional design system.
+
+## System Architecture
+
+### Frontend Architecture
+- **React 18** with TypeScript for type-safe component development
+- **Vite** as the build tool and development server for fast hot module replacement
+- **Wouter** for lightweight client-side routing instead of React Router
+- **Tailwind CSS** for utility-first styling with custom IEDC brand colors
+- **shadcn/ui** component library for consistent, accessible UI components
+- **TanStack Query (React Query)** for server state management and caching
+
+### Backend Architecture
+- **Express.js** server with TypeScript for API endpoints
+- **Node.js** runtime environment
+- **Modular routing system** with separation of concerns
+- **Memory storage implementation** with interface for easy database migration
+- **Error handling middleware** for consistent error responses
+
+### Database Layer
+- **Drizzle ORM** configured for PostgreSQL with Neon Database
+- **Schema-first approach** with TypeScript type generation
+- **Zod validation** integrated with database schemas
+- **Migration system** using Drizzle Kit
+
+## Key Components
+
+### Frontend Components
+- **Layout System**: Navigation, Footer, and responsive design
+- **Page Components**: Home, About, Vision, Mission, Team, Startups, Gallery, Contact
+- **UI Components**: Complete shadcn/ui component library implementation
+- **Responsive Design**: Mobile-first approach with adaptive layouts
+
+### Backend Services
+- **Storage Interface**: Abstracted data layer supporting multiple implementations
+- **API Routes**: RESTful endpoints with `/api` prefix
+- **Static File Serving**: Vite integration for development and production builds
+- **Request Logging**: Detailed logging for API requests with response times
+
+### Data Models
+- **User Schema**: Basic user management with username/password authentication
+- **Extensible Schema**: Easy to add new entities like startups, events, gallery items
+
+## Data Flow
+
+1. **Client Requests**: React components make API calls through TanStack Query
+2. **Server Processing**: Express routes handle requests and interact with storage layer
+3. **Data Storage**: Storage interface abstracts database operations
+4. **Response Caching**: TanStack Query caches responses for optimal performance
+5. **UI Updates**: React components automatically re-render on data changes
+
+## External Dependencies
+
+### Frontend Dependencies
+- **@radix-ui/***: Accessible UI primitives for shadcn/ui components
+- **@tanstack/react-query**: Server state management
+- **wouter**: Client-side routing
+- **tailwindcss**: Utility-first CSS framework
+- **lucide-react**: Icon library
+- **date-fns**: Date manipulation utilities
+
+### Backend Dependencies
+- **drizzle-orm**: Type-safe ORM for PostgreSQL
+- **@neondatabase/serverless**: Serverless PostgreSQL driver
+- **express**: Web application framework
+- **tsx**: TypeScript execution for development
+
+### Development Tools
+- **vite**: Build tool and development server
+- **typescript**: Type safety and tooling
+- **tailwindcss**: CSS framework
+- **postcss**: CSS processing
+- **esbuild**: Fast JavaScript bundler for production
+
+## Deployment Strategy
+
+### Development Environment
+- **Replit Integration**: Configured for Replit development environment
+- **Hot Module Replacement**: Instant updates during development
+- **Development Banner**: Replit-specific development indicators
+
+### Production Build
+- **Vite Build**: Optimized frontend bundle generation
+- **Server Bundle**: ESBuild for efficient server-side bundling
+- **Static Assets**: Served from `dist/public` directory
+- **Environment Variables**: Database URL and other configuration
+
+### Database Setup
+- **Neon PostgreSQL**: Serverless PostgreSQL database
+- **Migration System**: Drizzle Kit for schema migrations
+- **Connection Pooling**: Built-in connection management
+
+## Changelog
+
+```
+Changelog:
+- July 01, 2025. Initial setup
+```
+
+## User Preferences
+
+```
+Preferred communication style: Simple, everyday language.
+```
