@@ -1,16 +1,29 @@
 import { useState } from "react";
 import { Link, useLocation } from "wouter";
-import { Lightbulb, Menu, X } from "lucide-react";
+import { Lightbulb, Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 const navigationItems = [
   { name: "Home", path: "/" },
   { name: "About", path: "/about" },
   { name: "Team", path: "/team" },
-  { name: "Start-ups", path: "/startups" },
   { name: "Gallery", path: "/gallery" },
   { name: "Contact", path: "/contact" },
+];
+
+const innovationSubItems = [
+  { name: "Start-ups", path: "/innovation/startups" },
+  { name: "Patents", path: "/innovation/patents" },
+  { name: "Research Grants", path: "/innovation/grants" },
+  { name: "Publications", path: "/innovation/publications" },
+  { name: "Projects", path: "/innovation/projects" },
 ];
 
 export default function Navigation() {
@@ -50,6 +63,27 @@ export default function Navigation() {
                   {item.name}
                 </Link>
               ))}
+              
+              {/* Innovation & Research Dropdown */}
+              <DropdownMenu>
+                <DropdownMenuTrigger className={`px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center ${
+                  location.startsWith('/innovation')
+                    ? "iedc-blue font-semibold"
+                    : "iedc-gray hover:text-blue-600"
+                }`}>
+                  Innovation & Research
+                  <ChevronDown className="ml-1 h-4 w-4" />
+                </DropdownMenuTrigger>
+                <DropdownMenuContent className="bg-white shadow-lg">
+                  {innovationSubItems.map((subItem) => (
+                    <DropdownMenuItem key={subItem.path} className="hover:bg-iedc-light-gray">
+                      <Link href={subItem.path} className="w-full">
+                        {subItem.name}
+                      </Link>
+                    </DropdownMenuItem>
+                  ))}
+                </DropdownMenuContent>
+              </DropdownMenu>
             </div>
           </div>
 
@@ -77,6 +111,27 @@ export default function Navigation() {
                       {item.name}
                     </Link>
                   ))}
+                  
+                  {/* Innovation & Research Section for Mobile */}
+                  <div className="px-3 py-2">
+                    <div className="text-base font-medium iedc-gray mb-2">Innovation & Research</div>
+                    <div className="pl-4 space-y-2">
+                      {innovationSubItems.map((subItem) => (
+                        <Link
+                          key={subItem.path}
+                          href={subItem.path}
+                          onClick={() => setMobileMenuOpen(false)}
+                          className={`block px-2 py-1 text-sm transition-colors ${
+                            location === subItem.path
+                              ? "iedc-blue font-semibold"
+                              : "text-gray-600 hover:text-blue-600"
+                          }`}
+                        >
+                          {subItem.name}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
                 </div>
               </SheetContent>
             </Sheet>

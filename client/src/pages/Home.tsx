@@ -19,7 +19,7 @@ const quickLinks = [
     icon: Rocket,
     title: "Start-ups",
     description: "Companies we've incubated",
-    path: "/startups",
+    path: "/innovation/startups",
   },
   {
     icon: Images,
@@ -35,9 +35,9 @@ const quickLinks = [
   },
   {
     icon: TrendingUp,
-    title: "Innovation Hub",
-    description: "Cutting-edge technology development",
-    path: "/about",
+    title: "Innovation & Research",
+    description: "Patents, grants, publications and projects",
+    path: "/innovation/patents",
   },
 ];
 

@@ -6,12 +6,19 @@ const quickLinks = [
   { name: "Home", path: "/" },
   { name: "About Us", path: "/about" },
   { name: "Team", path: "/team" },
-  { name: "Start-ups", path: "/startups" },
+  { name: "Gallery", path: "/gallery" },
 ];
 
 const moreLinks = [
-  { name: "Gallery", path: "/gallery" },
   { name: "Contact", path: "/contact" },
+];
+
+const innovationLinks = [
+  { name: "Start-ups", path: "/innovation/startups" },
+  { name: "Patents", path: "/innovation/patents" },
+  { name: "Research Grants", path: "/innovation/grants" },
+  { name: "Publications", path: "/innovation/publications" },
+  { name: "Projects", path: "/innovation/projects" },
 ];
 
 export default function Footer() {
@@ -19,7 +26,7 @@ export default function Footer() {
     <footer className="bg-iedc-gray text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          <div className="md:col-span-2">
+          <div>
             <div className="flex items-center mb-4">
               <div className="w-8 h-8 bg-iedc-blue rounded-lg flex items-center justify-center mr-3">
                 <Lightbulb className="text-white h-4 w-4" />
@@ -55,15 +62,22 @@ export default function Footer() {
                   </Link>
                 </li>
               ))}
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="text-lg font-semibold mb-4">More Links</h3>
-            <ul className="space-y-2">
               {moreLinks.map((link) => (
                 <li key={link.path}>
                   <Link href={link.path} className="text-gray-300 hover:text-white transition-colors">
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="md:col-span-2">
+            <h3 className="text-lg font-semibold mb-4">Innovation & Research</h3>
+            <ul className="grid grid-cols-2 gap-2">
+              {innovationLinks.map((link) => (
+                <li key={link.path}>
+                  <Link href={link.path} className="text-gray-300 hover:text-white transition-colors text-sm">
                     {link.name}
                   </Link>
                 </li>
