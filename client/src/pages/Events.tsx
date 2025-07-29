@@ -71,7 +71,7 @@ export default function Events() {
       <section className="py-16 bg-gradient-to-r from-iedc-blue to-iedc-light-blue text-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">{eventDetails.name}</h1>
-          <Badge className="bg-white text-iedc-blue text-lg px-6 py-2 mb-6">
+          <Badge className="bg-white text-iedc-blue text-lg px-6 py-2 mb-6 font-semibold">
             {eventDetails.edition}
           </Badge>
           <p className="text-xl mb-8">
@@ -163,7 +163,7 @@ export default function Events() {
                 Our flagship Shark Tank-style competition where innovative startups and businesses 
                 competed for funding and recognition.
               </p>
-              <Badge className="bg-white text-iedc-blue text-xl px-6 py-3">
+              <Badge className="bg-white text-iedc-blue text-xl px-6 py-3 font-bold">
                 Prize Pool: {eventDetails.prize}
               </Badge>
             </CardContent>
@@ -225,7 +225,7 @@ export default function Events() {
             to be part of our thriving entrepreneurial community.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Badge className="bg-white text-iedc-blue text-lg px-6 py-3">
+            <Badge className="bg-white text-iedc-blue text-lg px-6 py-3 font-semibold">
               Follow our updates for Bengal E-Summit 2025
             </Badge>
           </div>

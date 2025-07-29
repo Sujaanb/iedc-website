@@ -104,6 +104,9 @@ Changelog:
 - July 29, 2025. Updated year of inception from 2014 to 2023
 - July 29, 2025. Enhanced Team section with faculty member photos and detailed information
 - July 29, 2025. Updated Home page statistics to reflect accurate data
+- July 29, 2025. Fixed white text visibility issues by correcting CSS classes and adding font-weight to improve contrast
+- July 29, 2025. Updated IEDC logo throughout the website using the provided brand logo image
+- July 29, 2025. Enhanced text contrast for better readability on Badge components and buttons
 ```
 
 ## User Preferences

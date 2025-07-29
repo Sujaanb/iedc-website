@@ -1,6 +1,7 @@
 import { Link } from "wouter";
 import { Lightbulb } from "lucide-react";
 import { FaTwitter, FaFacebook, FaLinkedin } from "react-icons/fa";
+import iedcLogo from "@assets/IEDC_Logo_1753773593525.png";
 
 const quickLinks = [
   { name: "Home", path: "/" },
@@ -29,9 +30,11 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
             <div className="flex items-center mb-4">
-              <div className="w-8 h-8 bg-iedc-blue rounded-lg flex items-center justify-center mr-3">
-                <Lightbulb className="text-white h-4 w-4" />
-              </div>
+              <img 
+                src={iedcLogo} 
+                alt="IEDC IEM Salt Lake Logo" 
+                className="w-10 h-10 mr-3 object-contain"
+              />
               <div>
                 <div className="text-lg font-bold">IEDC</div>
                 <div className="text-xs text-gray-400">IEM Salt Lake</div>
