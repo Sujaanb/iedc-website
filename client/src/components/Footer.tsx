@@ -5,13 +5,11 @@ import { FaTwitter, FaFacebook, FaLinkedin } from "react-icons/fa";
 const quickLinks = [
   { name: "Home", path: "/" },
   { name: "About Us", path: "/about" },
-  { name: "Vision", path: "/vision" },
-  { name: "Mission", path: "/mission" },
+  { name: "Team", path: "/team" },
+  { name: "Start-ups", path: "/startups" },
 ];
 
 const moreLinks = [
-  { name: "Team", path: "/team" },
-  { name: "Start-ups", path: "/startups" },
   { name: "Gallery", path: "/gallery" },
   { name: "Contact", path: "/contact" },
 ];

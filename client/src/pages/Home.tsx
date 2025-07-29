@@ -6,20 +6,8 @@ const quickLinks = [
   {
     icon: Info,
     title: "About Us",
-    description: "Learn about our mission and objectives",
+    description: "Learn about our vision, mission and objectives",
     path: "/about",
-  },
-  {
-    icon: Eye,
-    title: "Vision",
-    description: "Our vision for the future",
-    path: "/vision",
-  },
-  {
-    icon: Target,
-    title: "Mission",
-    description: "Our commitment to excellence",
-    path: "/mission",
   },
   {
     icon: Users,
