@@ -51,7 +51,8 @@ export default function Navigation() {
           {/* Desktop Navigation */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">
-              {navigationItems.map((item) => (
+              {/* Home, About, Team */}
+              {navigationItems.slice(0, 3).map((item) => (
                 <Link
                   key={item.path}
                   href={item.path}
@@ -85,6 +86,21 @@ export default function Navigation() {
                   ))}
                 </DropdownMenuContent>
               </DropdownMenu>
+
+              {/* Events, Gallery, Contact */}
+              {navigationItems.slice(3).map((item) => (
+                <Link
+                  key={item.path}
+                  href={item.path}
+                  className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                    location === item.path
+                      ? "iedc-blue font-semibold"
+                      : "iedc-gray hover:text-blue-600"
+                  }`}
+                >
+                  {item.name}
+                </Link>
+              ))}
             </div>
           </div>
 
@@ -98,7 +114,8 @@ export default function Navigation() {
               </SheetTrigger>
               <SheetContent side="right" className="w-64">
                 <div className="flex flex-col space-y-4 mt-8">
-                  {navigationItems.map((item) => (
+                  {/* Home, About, Team */}
+                  {navigationItems.slice(0, 3).map((item) => (
                     <Link
                       key={item.path}
                       href={item.path}
@@ -133,6 +150,22 @@ export default function Navigation() {
                       ))}
                     </div>
                   </div>
+
+                  {/* Events, Gallery, Contact */}
+                  {navigationItems.slice(3).map((item) => (
+                    <Link
+                      key={item.path}
+                      href={item.path}
+                      onClick={() => setMobileMenuOpen(false)}
+                      className={`px-3 py-2 text-base font-medium transition-colors ${
+                        location === item.path
+                          ? "iedc-blue font-semibold"
+                          : "iedc-gray hover:text-blue-600"
+                      }`}
+                    >
+                      {item.name}
+                    </Link>
+                  ))}
                 </div>
               </SheetContent>
             </Sheet>
