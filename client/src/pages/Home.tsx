@@ -1,6 +1,7 @@
 import { Link } from "wouter";
 import { Card, CardContent } from "@/components/ui/card";
 import { Info, Eye, Target, Users, Rocket, Images, Mail, TrendingUp, Calendar } from "lucide-react";
+import iedcLogo from "@assets/IEDC_Logo_1753773593525.png";
 
 const quickLinks = [
   {
@@ -54,13 +55,17 @@ export default function Home() {
       <section className="bg-gradient-to-r from-iedc-blue to-iedc-light-blue text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="text-center">
+            <div className="flex justify-center mb-8">
+              <img 
+                src={iedcLogo} 
+                alt="IEDC IEM Salt Lake Logo" 
+                className="w-32 h-32 object-contain"
+              />
+            </div>
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
               Innovation and Entrepreneurship Development Center
             </h1>
             <p className="text-xl md:text-2xl mb-4">IEM Salt Lake</p>
-            <div className="inline-block bg-white bg-opacity-20 px-6 py-2 rounded-full">
-              <span className="text-lg font-semibold">Year of Inception: 2023</span>
-            </div>
           </div>
         </div>
       </section>

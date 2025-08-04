@@ -9,39 +9,59 @@ import drIndranilImg from "@assets/Dr. Indranil Maity_1753771851795.png";
 const facultyMembers = [
   {
     name: "Dr. Satyajit Chakrabarti",
-    designation: "President, IEM-UEM Group",
-    role: "Provides strategic leadership and vision for the IEM-UEM Group, overseeing academic and entrepreneurial initiatives.",
+    designation: "Director, IEM-UEM Group",
+    bio: "Provides strategic leadership and vision for the IEM-UEM Group, overseeing academic and entrepreneurial initiatives.",
     image: drSatyajitImg,
     icon: Crown,
     bgColor: "bg-purple-600",
-    category: "Leadership",
   },
   {
     name: "Dr. Malay Gangopadhyay",
-    designation: "Head of Department (HOD), Dept. of ECE",
-    role: "Leads the Electrical and Electronics Engineering (ECE) department, fostering research and innovation in engineering technologies.",
+    designation: "Vice Principal IEM, Head of Department (HOD), Dept. of Electronics and Communications Engineering",
+    bio: "Leads the Electronics and Communications Engineering department, fostering research and innovation in engineering technologies.",
     image: drMalayImg,
     icon: Building,
     bgColor: "bg-iedc-blue",
-    category: "Department Head",
   },
   {
     name: "Dr. Subhabrata Banerjee",
-    designation: "Coordinator, IEM IEDC ECE",
-    role: "Oversees the Innovation and Entrepreneurship Development Cell (IEDC) within the ECE department, driving student-driven projects, patents, and product development.",
+    designation: "Professor and Coordinator IEDC ECE",
+    bio: "Oversees the Innovation and Entrepreneurship Development Cell (IEDC) within the Electronics and Communications Engineering department, driving student-driven projects, patents, and product development.",
     image: drSubhabrataImg,
     icon: Users,
     bgColor: "bg-green-600",
-    category: "IEDC Coordinator",
   },
   {
     name: "Dr. Indranil Maity",
-    designation: "Coordinator, IEM IEDC ECE",
-    role: "Collaborates with Dr. Subhabrata Banerjee to manage IEDC activities, focusing on research grants, industry partnerships, and entrepreneurial training.",
+    designation: "Associate Proffesor and co coordinator IEDC ECE",
+    bio: "Collaborates with Dr. Subhabrata Banerjee to manage IEDC activities, focusing on research grants, industry partnerships, and entrepreneurial training.",
     image: drIndranilImg,
     icon: Users,
     bgColor: "bg-iedc-light-blue",
-    category: "IEDC Coordinator",
+  },
+];
+
+const studentMembers = [
+  {
+    name: "Student Member 1",
+    designation: "Final Year Student",
+    bio: "Active participant in IEDC activities and research projects.",
+    icon: User,
+    bgColor: "bg-blue-500",
+  },
+  {
+    name: "Student Member 2", 
+    designation: "Pre-Final Year Student",
+    bio: "Involved in innovation projects and startup development.",
+    icon: User,
+    bgColor: "bg-green-500",
+  },
+  {
+    name: "Student Member 3",
+    designation: "Third Year Student", 
+    bio: "Contributing to research publications and patent applications.",
+    icon: User,
+    bgColor: "bg-purple-500",
   },
 ];
 
@@ -83,9 +103,6 @@ export default function Team() {
                       <div className="flex items-start justify-between mb-3">
                         <div>
                           <h3 className="text-xl font-bold iedc-gray mb-1">{member.name}</h3>
-                          <Badge className={`${member.bgColor} text-white text-xs`}>
-                            {member.category}
-                          </Badge>
                         </div>
                         <div className={`w-8 h-8 ${member.bgColor} rounded-full flex items-center justify-center`}>
                           <member.icon className="text-white h-4 w-4" />
@@ -98,8 +115,8 @@ export default function Team() {
                       </div>
                       
                       <div>
-                        <p className="font-semibold iedc-blue text-sm mb-1">Role</p>
-                        <p className="text-gray-600 text-sm leading-relaxed">{member.role}</p>
+                        <p className="font-semibold iedc-blue text-sm mb-1">Bio</p>
+                        <p className="text-gray-600 text-sm leading-relaxed">{member.bio}</p>
                       </div>
                     </div>
                   </div>
@@ -138,11 +155,41 @@ export default function Team() {
             </div>
           </div>
 
+          {/* Student Members Section */}
+          <div className="mt-20">
+            <h2 className="text-3xl font-bold text-center mb-12 iedc-gray">
+              Student Members
+            </h2>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {studentMembers.map((student, index) => (
+                <Card key={index} className="shadow-lg hover:shadow-xl transition-shadow border-l-4 border-iedc-light-blue">
+                  <CardContent className="p-6">
+                    <div className="text-center">
+                      <div className={`w-16 h-16 ${student.bgColor} rounded-full flex items-center justify-center mx-auto mb-4`}>
+                        <student.icon className="text-white h-8 w-8" />
+                      </div>
+                      <h3 className="text-lg font-bold iedc-gray mb-2">{student.name}</h3>
+                      <div className="mb-3">
+                        <p className="font-semibold iedc-blue text-sm mb-1">Designation</p>
+                        <p className="text-gray-700 text-sm">{student.designation}</p>
+                      </div>
+                      <div>
+                        <p className="font-semibold iedc-blue text-sm mb-1">Bio</p>
+                        <p className="text-gray-600 text-sm leading-relaxed">{student.bio}</p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+
           {/* Call to Action */}
           <div className="mt-16 text-center">
             <Card className="bg-white border-2 border-iedc-blue max-w-3xl mx-auto">
               <CardContent className="p-8">
-                <h3 className="text-2xl font-bold mb-4 text-black">Faculty Mentorship Program</h3>
+                <h3 className="text-2xl font-bold mb-4 text-black">Mentorship Program</h3>
                 <p className="text-lg leading-relaxed mb-6 text-black">
                   Our distinguished faculty members provide dedicated mentorship to students, guiding them through 
                   cutting-edge research, innovation projects, and entrepreneurial ventures across multiple technology domains.

@@ -21,11 +21,11 @@ const navigationItems = [
 ];
 
 const innovationSubItems = [
-  { name: "Start-ups", path: "/innovation/startups" },
-  { name: "Patents", path: "/innovation/patents" },
   { name: "Research Grants", path: "/innovation/grants" },
-  { name: "Publications", path: "/innovation/publications" },
   { name: "Projects", path: "/innovation/projects" },
+  { name: "Patents", path: "/innovation/patents" },
+  { name: "Publications", path: "/innovation/publications" },
+  { name: "Start-ups", path: "/innovation/startups" },
 ];
 
 export default function Navigation() {
@@ -36,20 +36,14 @@ export default function Navigation() {
     <nav className="bg-white shadow-lg sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          {/* Logo */}
-          <Link href="/" className="flex-shrink-0 cursor-pointer">
+          {/* IEM Logo - Left */}
+          <div className="flex-shrink-0">
             <div className="flex items-center">
-              <img 
-                src={iedcLogo} 
-                alt="IEDC IEM Salt Lake Logo" 
-                className="w-12 h-12 mr-3 object-contain"
-              />
-              <div>
-                <div className="text-lg font-bold iedc-blue">IEDC</div>
-                <div className="text-xs text-gray-600">IEM Salt Lake</div>
+              <div className="w-12 h-12 bg-gray-200 rounded-lg flex items-center justify-center">
+                <span className="text-xs font-bold text-gray-600">IEM</span>
               </div>
             </div>
-          </Link>
+          </div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:block">
@@ -104,6 +98,15 @@ export default function Navigation() {
                   {item.name}
                 </Link>
               ))}
+            </div>
+          </div>
+
+          {/* UEM Logo - Right (Desktop) */}
+          <div className="hidden md:block flex-shrink-0">
+            <div className="flex items-center">
+              <div className="w-12 h-12 bg-gray-200 rounded-lg flex items-center justify-center">
+                <span className="text-xs font-bold text-gray-600">UEM</span>
+              </div>
             </div>
           </div>
 

@@ -8,9 +8,8 @@ import {
 const techAreas = [
   { icon: Bot, title: "Robotics", description: "Advanced robotics systems and automation" },
   { icon: Wifi, title: "IoT", description: "Internet of Things and connected devices" },
-  { icon: Radio, title: "RF & Microwave", description: "Radio frequency and microwave technology" },
-  { icon: Brain, title: "Machine Learning", description: "Advanced ML algorithms and applications" },
-  { icon: Cpu, title: "AI", description: "Artificial Intelligence solutions" },
+  { icon: Radio, title: "RF, MF & Antenna", description: "Radio frequency, microwave and antenna technology" },
+  { icon: Brain, title: "AI & Machine Learning", description: "Artificial Intelligence solutions and advanced ML algorithms" },
   { icon: Glasses, title: "AR/VR", description: "Augmented and Virtual Reality systems" },
 ];
 
@@ -22,6 +21,9 @@ export default function About() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-8">About IEDC</h1>
           <p className="text-xl mb-4">Innovation and Entrepreneurship Development Center</p>
+          <div className="inline-block bg-white bg-opacity-20 px-6 py-2 rounded-full mb-4">
+            <span className="text-lg font-semibold">Year of Inception: 2023</span>
+          </div>
           <div className="w-24 h-1 bg-white mx-auto"></div>
         </div>
       </section>
