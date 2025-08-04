@@ -4,29 +4,35 @@ import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import Layout from "@/components/Layout";
-
-// Simple test component first
-function TestHome() {
-  return (
-    <div className="p-8">
-      <h1 className="text-4xl font-bold text-black">IEDC IEM Salt Lake</h1>
-      <p className="text-lg text-gray-600 mt-4">Innovation and Entrepreneurship Development Center</p>
-      <p className="text-sm text-green-600 mt-2">Website is loading successfully!</p>
-    </div>
-  );
-}
+import Home from "@/pages/Home";
+import About from "@/pages/About";
+import Team from "@/pages/Team";
+import Events from "@/pages/Events";
+import Gallery from "@/pages/Gallery";
+import Contact from "@/pages/Contact";
+import NotFound from "@/pages/not-found";
+import InnovationStartups from "@/pages/innovation/Startups";
+import InnovationPatents from "@/pages/innovation/Patents";
+import InnovationGrants from "@/pages/innovation/Grants";
+import InnovationPublications from "@/pages/innovation/Publications";
+import InnovationProjects from "@/pages/innovation/Projects";
 
 function Router() {
   return (
     <Layout>
       <Switch>
-        <Route path="/" component={TestHome} />
-        <Route>
-          <div className="p-8">
-            <h1 className="text-2xl font-bold text-black">Page Not Found</h1>
-            <p className="text-gray-600">Please use the navigation to go back to the home page.</p>
-          </div>
-        </Route>
+        <Route path="/" component={Home} />
+        <Route path="/about" component={About} />
+        <Route path="/team" component={Team} />
+        <Route path="/events" component={Events} />
+        <Route path="/gallery" component={Gallery} />
+        <Route path="/contact" component={Contact} />
+        <Route path="/innovation/startups" component={InnovationStartups} />
+        <Route path="/innovation/patents" component={InnovationPatents} />
+        <Route path="/innovation/grants" component={InnovationGrants} />
+        <Route path="/innovation/publications" component={InnovationPublications} />
+        <Route path="/innovation/projects" component={InnovationProjects} />
+        <Route component={NotFound} />
       </Switch>
     </Layout>
   );
