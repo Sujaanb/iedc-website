@@ -91,7 +91,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-gray-700 mt-8 pt-8 text-center">
-          <p className="text-gray-400">© 2024 IEDC IEM Salt Lake. All Rights Reserved.</p>
+          <p className="text-gray-400">Developed by Sujaan & Sanket</p>
         </div>
       </div>
     </footer>

@@ -107,6 +107,14 @@ Changelog:
 - July 29, 2025. Fixed white text visibility issues by correcting CSS classes and adding font-weight to improve contrast
 - July 29, 2025. Updated IEDC logo throughout the website using the provided brand logo image
 - July 29, 2025. Enhanced text contrast for better readability on Badge components and buttons
+- August 04, 2025. Implemented three-logo layout: IEM (top-left), UEM (top-right), IEDC (center home page)
+- August 04, 2025. Moved "Year of Inception: 2023" from Home to About page
+- August 04, 2025. Updated Team page: changed "Role" to "Bio", removed category tags, updated faculty designations
+- August 04, 2025. Added Student Members section to Team page
+- August 04, 2025. Combined AI and ML into "AI & Machine Learning", updated "RF & Microwave" to "RF, MF & Antenna"
+- August 04, 2025. Reordered Innovation & Research navigation: Research Grants → Projects → Patents → Publications → Start-ups
+- August 04, 2025. Added authentic IEM and UEM logos to navigation
+- August 04, 2025. Updated footer copyright to "Developed by Sujaan & Sanket"
 ```
 
 ## User Preferences
