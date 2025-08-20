@@ -13,7 +13,7 @@ const eventDetails = {
   venue: "IEM Gurukul Campus",
   timing: "10:00 AM – 5:00 PM",
   participants: "Over 500 attendees",
-  prize: "₹1,00,000",
+  prize: "Attractive prizes and recognition",
 };
 
 const chiefGuests = [

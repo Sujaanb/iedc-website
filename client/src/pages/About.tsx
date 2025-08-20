@@ -2,15 +2,16 @@ import { Card, CardContent } from "@/components/ui/card";
 import { 
   Lightbulb, Settings, Rocket, Users, Eye, Target, 
   Globe, GraduationCap, Cpu, Handshake, Bot, Wifi, 
-  Radio, Brain, Glasses 
+  Radio, Brain, Microchip, Signal 
 } from "lucide-react";
 
 const techAreas = [
   { icon: Bot, title: "Robotics", description: "Advanced robotics systems and automation" },
   { icon: Wifi, title: "IoT", description: "Internet of Things and connected devices" },
-  { icon: Radio, title: "RF, MF & Antenna", description: "Radio frequency, microwave and antenna technology" },
+  { icon: Radio, title: "RF & Antenna", description: "Radio frequency and antenna technology" },
   { icon: Brain, title: "AI & Machine Learning", description: "Artificial Intelligence solutions and advanced ML algorithms" },
-  { icon: Glasses, title: "AR/VR", description: "Augmented and Virtual Reality systems" },
+  { icon: Microchip, title: "VLSI", description: "Very Large Scale Integration design and implementation" },
+  { icon: Signal, title: "Communications", description: "Modern communication systems and protocols" },
 ];
 
 export default function About() {
@@ -19,7 +20,7 @@ export default function About() {
       {/* Hero Section */}
       <section className="py-16 bg-gradient-to-r from-iedc-blue to-iedc-light-blue text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-8">About IEDC</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-8">About Us</h1>
           <p className="text-xl mb-4">Innovation and Entrepreneurship Development Center</p>
           <div className="inline-block bg-white bg-opacity-20 px-6 py-2 rounded-full mb-4">
             <span className="text-lg font-semibold">Year of Inception: 2023</span>
@@ -31,19 +32,7 @@ export default function About() {
       {/* About Us Overview */}
       <section className="py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Card className="bg-iedc-light-gray shadow-lg mb-12">
-            <CardContent className="p-8 md:p-12">
-              <div className="text-center mb-8">
-                <div className="w-16 h-16 bg-iedc-blue rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Lightbulb className="text-white h-8 w-8" />
-                </div>
-                <h2 className="text-2xl md:text-3xl font-bold iedc-gray mb-6">About Us</h2>
-              </div>
-              <blockquote className="text-lg md:text-xl leading-relaxed iedc-gray italic text-center">
-                "To promote research, product development and business incubation ecosystem for the students – fostering a trained and skilled student community that will work in cutting edge technologies and build new-age businesses to solve technological challenges for making the earth a better place for all living objects."
-              </blockquote>
-            </CardContent>
-          </Card>
+
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
             <div className="text-center">
@@ -143,7 +132,7 @@ export default function About() {
           <Card className="bg-iedc-light-gray shadow-lg mb-12">
             <CardContent className="p-8 md:p-12">
               <blockquote className="text-lg md:text-xl leading-relaxed iedc-gray text-center">
-                "The IEDC at IEM is committed to fostering a culture of research and product development among students. Its primary objective is to nurture a student community proficient in cutting-edge technologies through creativity and innovation. Under the mentorship of faculty members, students at the IEDC work in diverse fields including Robotics, IoT, RF & Microwave, Machine Learning, AI, Augmented Reality, Virtual Reality, and unmanned aerial and ground vehicles. The center strives to create an ecosystem that encourages entrepreneurship and innovation."
+                "The IEDC ECE is committed to fostering a culture of research and product development among students. Its primary objective is to nurture a student community proficient in cutting-edge technologies through creativity and innovation. Under the mentorship of faculty members, students at the IEDC work in diverse fields including Robotics, IoT, RF & Microwave, Machine Learning, AI, Augmented Reality, Virtual Reality, and unmanned aerial and ground vehicles. The center strives for excellence by developing industry-ready products with significant real-world impact. Additionally, it focuses on cultivating entrepreneurship and tackling technological and business challenges faced by startups."
               </blockquote>
             </CardContent>
           </Card>

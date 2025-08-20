@@ -17,7 +17,7 @@ const facultyMembers = [
   },
   {
     name: "Dr. Malay Gangopadhyay",
-    designation: "Vice Principal IEM, Head of Department (HOD), Dept. of Electronics and Communications Engineering",
+    designation: "Vice Principal, Institute of Engineering and Management",
     bio: "Leads the Electronics and Communications Engineering department, fostering research and innovation in engineering technologies.",
     image: drMalayImg,
     icon: Building,
@@ -33,7 +33,7 @@ const facultyMembers = [
   },
   {
     name: "Dr. Indranil Maity",
-    designation: "Associate Proffesor and co coordinator IEDC ECE",
+    designation: "Associate Professor and Co-Coordinator IEDC ECE",
     bio: "Collaborates with Dr. Subhabrata Banerjee to manage IEDC activities, focusing on research grants, industry partnerships, and entrepreneurial training.",
     image: drIndranilImg,
     icon: Users,
@@ -125,38 +125,8 @@ export default function Team() {
             ))}
           </div>
 
-          {/* Faculty Expertise Section */}
-          <div className="mt-16">
-            <h3 className="text-2xl font-bold text-center mb-8 iedc-gray">Our Expertise</h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <Card className="bg-iedc-blue text-white">
-                <CardContent className="p-6 text-center">
-                  <Crown className="w-12 h-12 mx-auto mb-4" />
-                  <h4 className="text-lg font-semibold mb-2">Strategic Leadership</h4>
-                  <p className="text-sm">Providing vision and direction for academic and entrepreneurial excellence</p>
-                </CardContent>
-              </Card>
-              
-              <Card className="bg-iedc-light-blue text-white">
-                <CardContent className="p-6 text-center">
-                  <Building className="w-12 h-12 mx-auto mb-4" />
-                  <h4 className="text-lg font-semibold mb-2">Research & Innovation</h4>
-                  <p className="text-sm">Leading cutting-edge research in engineering and technology domains</p>
-                </CardContent>
-              </Card>
-              
-              <Card className="bg-iedc-gray text-white">
-                <CardContent className="p-6 text-center">
-                  <Users className="w-12 h-12 mx-auto mb-4" />
-                  <h4 className="text-lg font-semibold mb-2">Entrepreneurship Development</h4>
-                  <p className="text-sm">Fostering student-driven innovation and startup development</p>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-
           {/* Student Members Section */}
-          <div className="mt-20">
+          <div className="mt-16">
             <h2 className="text-3xl font-bold text-center mb-12 iedc-gray">
               Student Members
             </h2>
