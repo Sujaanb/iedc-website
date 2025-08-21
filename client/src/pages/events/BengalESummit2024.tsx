@@ -1,6 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Calendar, MapPin, Clock, Users, Trophy, Star } from "lucide-react";
+import { Calendar, MapPin, Clock, Users, Trophy, Star, ArrowLeft } from "lucide-react";
+import { Link } from "wouter";
 import event1 from "@assets/Screenshot 2025-07-29 120336_1753770916701.png";
 import event2 from "@assets/Screenshot 2025-07-29 120355_1753770916701.png";
 import event3 from "@assets/Screenshot 2025-07-29 120410_1753770916701.png";
@@ -64,9 +65,21 @@ const eventImages = [
   },
 ];
 
-export default function Events() {
+export default function BengalESummit2024() {
   return (
     <div>
+      {/* Back Navigation */}
+      <section className="py-4 bg-gray-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <Link href="/events">
+            <div className="flex items-center text-iedc-blue hover:text-blue-700 transition-colors cursor-pointer">
+              <ArrowLeft className="h-4 w-4 mr-2" />
+              <span className="text-sm font-medium">Back to Events</span>
+            </div>
+          </Link>
+        </div>
+      </section>
+
       {/* Hero Section */}
       <section className="py-16 bg-gradient-to-r from-iedc-blue to-iedc-light-blue text-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -163,8 +176,8 @@ export default function Events() {
                 Our flagship Shark Tank-style competition where innovative startups and businesses 
                 competed for funding and recognition.
               </p>
-              <Badge className="bg-white text-black text-xl px-6 py-3 font-bold border-2 border-white">
-                Prize Pool: {eventDetails.prize}
+              <Badge className="bg-white text-black px-4 py-2 text-sm font-semibold">
+                {eventDetails.prize}
               </Badge>
             </CardContent>
           </Card>
@@ -174,17 +187,15 @@ export default function Events() {
       {/* Chief Guests */}
       <section className="py-16 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-center iedc-gray mb-12">Distinguished Guests</h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <h2 className="text-3xl font-bold text-center iedc-gray mb-12">Distinguished Chief Guests</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
             {chiefGuests.map((guest, index) => (
               <Card key={index} className="shadow-md hover:shadow-lg transition-shadow">
                 <CardContent className="p-6 text-center">
                   <div className="w-16 h-16 bg-iedc-blue rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Star className="text-white h-8 w-8" />
+                    <Users className="text-white h-8 w-8" />
                   </div>
-                  <h3 className="font-semibold iedc-gray">{guest}</h3>
-                  <p className="text-sm text-gray-600 mt-1">Chief Guest</p>
+                  <h3 className="font-semibold iedc-gray text-sm">{guest}</h3>
                 </CardContent>
               </Card>
             ))}
@@ -196,19 +207,18 @@ export default function Events() {
       <section className="py-16 bg-iedc-light-gray">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-center iedc-gray mb-12">Event Gallery</h2>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {eventImages.map((image, index) => (
-              <Card key={index} className="shadow-md overflow-hidden">
-                <div className="aspect-w-16 aspect-h-9">
+              <Card key={index} className="overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+                <div className="aspect-video">
                   <img 
                     src={image.src} 
                     alt={image.alt}
-                    className="w-full h-64 object-cover"
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                   />
                 </div>
                 <CardContent className="p-4">
-                  <p className="text-gray-600 text-sm">{image.caption}</p>
+                  <p className="text-gray-600 text-sm text-center">{image.caption}</p>
                 </CardContent>
               </Card>
             ))}
@@ -216,18 +226,32 @@ export default function Events() {
         </div>
       </section>
 
-      {/* Call to Action */}
-      <section className="py-16 bg-iedc-blue text-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold mb-6">Join Our Next Event</h2>
-          <p className="text-xl mb-8">
-            Stay connected with IEDC IEM Salt Lake for upcoming events, workshops, and opportunities 
-            to be part of our thriving entrepreneurial community.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Badge className="bg-white text-black text-lg px-6 py-3 font-semibold border-2 border-white">
-              Follow our updates for Bengal E-Summit 2025
-            </Badge>
+      {/* Success Stories */}
+      <section className="py-16 bg-white">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-center iedc-gray mb-12">Event Impact</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <Card className="text-center shadow-md">
+              <CardContent className="p-8">
+                <div className="text-4xl font-bold iedc-blue mb-2">500+</div>
+                <h3 className="text-lg font-semibold iedc-gray mb-2">Attendees</h3>
+                <p className="text-gray-600 text-sm">Entrepreneurs, students, and industry professionals</p>
+              </CardContent>
+            </Card>
+            <Card className="text-center shadow-md">
+              <CardContent className="p-8">
+                <div className="text-4xl font-bold iedc-blue mb-2">50+</div>
+                <h3 className="text-lg font-semibold iedc-gray mb-2">Startup Pitches</h3>
+                <p className="text-gray-600 text-sm">Innovative ideas presented in Investopia</p>
+              </CardContent>
+            </Card>
+            <Card className="text-center shadow-md">
+              <CardContent className="p-8">
+                <div className="text-4xl font-bold iedc-blue mb-2">15+</div>
+                <h3 className="text-lg font-semibold iedc-gray mb-2">Industry Experts</h3>
+                <p className="text-gray-600 text-sm">Mentors, investors, and thought leaders</p>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>

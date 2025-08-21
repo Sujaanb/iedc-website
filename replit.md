@@ -115,6 +115,12 @@ Changelog:
 - August 04, 2025. Reordered Innovation & Research navigation: Research Grants → Projects → Patents → Publications → Start-ups
 - August 04, 2025. Added authentic IEM and UEM logos to navigation
 - August 04, 2025. Updated footer copyright to "Developed by Sujaan & Sanket"
+- August 21, 2025. Restructured Events section: Created year-wise event organization with separate pages for each event
+- August 21, 2025. Created EventsOverview page showcasing events by year (2024, 2025) with different event categories
+- August 21, 2025. Added individual event pages: Bengal E-Summit 2024, Tech Innovation Workshop 2024, Startup Pitch Competition 2024
+- August 21, 2025. Updated About page content: new vision/mission statements, updated technology areas (removed MF, replaced AR/VR with VLSI, added Communications)
+- August 21, 2025. Updated Team page faculty designations and removed "Our Expertise" section completely
+- August 21, 2025. Removed specific prize amounts from events, using generic "attractive prizes and recognition" language
 ```
 
 ## User Preferences
