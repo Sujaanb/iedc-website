@@ -6,6 +6,35 @@ import drMalayImg from "@assets/Dr. Malay Gangopadhyay_1753771851795.png";
 import drSubhabrataImg from "@assets/Dr. Subhabrata Banerjee_1753771851796.png";
 import drIndranilImg from "@assets/Dr. Indranil Maity_1753771851795.png";
 
+// Student images
+import sagnikChakrabortyImg from "@assets/student_images/sagnik_chakraborty.jpg";
+import shrayasMitraImg from "@assets/student_images/shrayas_mitra.jpeg";
+import sagnikAdhikaryImg from "@assets/student_images/sagnik_adhikary.jpg";
+import snehangshuDeImg from "@assets/student_images/snehangshu_de.jpg";
+import aditiRaiImg from "@assets/student_images/aditi_rai.jpg";
+import deepBatabyalImg from "@assets/student_images/deep_batabyal.jpeg";
+import shreyaskarGangulyImg from "@assets/student_images/shreyaskar_ganguly.jpg";
+import arkaGhoshImg from "@assets/student_images/arka_ghosh.jpg";
+import saheliDebImg from "@assets/student_images/saheli_deb.jpg";
+import sayanChatterjeeImg from "@assets/student_images/sayan_chatterjee.jpg";
+import prasunitaDeImg from "@assets/student_images/prasunita_de.jpg";
+import ritabhasaChowdhuryImg from "@assets/student_images/ritabhasa_chowdhury.jpg";
+import sulagnRoyImg from "@assets/student_images/sulagna_roy.jpg";
+import sreshthaHiraImg from "@assets/student_images/sreshtha_hira.jpeg";
+import rupshaGhosalImg from "@assets/student_images/rupsha_ghosal.jpg";
+import nirmalyaKusumGhoshImg from "@assets/student_images/nirmalya_kusum_ghosh.jpg";
+import imanDasImg from "@assets/student_images/iman_das.jpeg";
+import anweshaGhoshImg from "@assets/student_images/anwesha_ghosh.jpg";
+import swastikaTalukdarImg from "@assets/student_images/swastika_talukdar.jpg";
+import adrikaLahiriImg from "@assets/student_images/adrika_lahiri.jpg";
+import sumedhaGhoshImg from "@assets/student_images/sumedha_ghosh.jpeg";
+import sangaBhattacharyaImg from "@assets/student_images/sanga_bhattacharya.png";
+import rumaniSadhukhanImg from "@assets/student_images/rumani_sadhukhan.png";
+import souptikBiswasImg from "@assets/student_images/souptik_biswas.jpeg";
+import tanishaChakrabartiImg from "@assets/student_images/tanisha_chakrabarti.png";
+import pratyushKumarDeyImg from "@assets/student_images/pratyush_kumar_dey.jpg";
+import prayasRoyImg from "@assets/student_images/prayas_roy.jpeg";
+
 const facultyMembers = [
   {
     name: "Dr. Satyajit Chakrabarti",
@@ -41,28 +70,203 @@ const facultyMembers = [
   },
 ];
 
-const studentMembers = [
+// Student members organized by sub-committee hierarchy
+const studentCommittees = [
   {
-    name: "Student Member 1",
-    designation: "Final Year Student",
-    bio: "Active participant in IEDC activities and research projects.",
-    icon: User,
-    bgColor: "bg-blue-500",
+    name: "Operation",
+    bgColor: "bg-red-600",
+    members: [
+      {
+        name: "Sagnik Chakraborty",
+        committees: ["Operation"],
+        image: sagnikChakrabortyImg
+      }
+    ]
   },
   {
-    name: "Student Member 2", 
-    designation: "Pre-Final Year Student",
-    bio: "Involved in innovation projects and startup development.",
-    icon: User,
-    bgColor: "bg-green-500",
+    name: "Hardware", 
+    bgColor: "bg-orange-600",
+    members: [
+      {
+        name: "Shrayas Mitra",
+        committees: ["Management", "Hardware"],
+        image: shrayasMitraImg
+      },
+      {
+        name: "Sagnik Adhikary",
+        committees: ["Hardware"],
+        image: sagnikAdhikaryImg
+      }
+    ]
   },
   {
-    name: "Student Member 3",
-    designation: "Third Year Student", 
-    bio: "Contributing to research publications and patent applications.",
-    icon: User,
-    bgColor: "bg-purple-500",
+    name: "Management",
+    bgColor: "bg-blue-600", 
+    members: [
+      {
+        name: "Snehangshu De",
+        committees: ["Events", "Management", "Social Media / Collaboration"],
+        image: snehangshuDeImg
+      },
+      {
+        name: "Aditi Rai", 
+        committees: ["Management"],
+        image: aditiRaiImg
+      },
+      {
+        name: "Deep Batabyal",
+        committees: ["Management"],
+        image: deepBatabyalImg
+      }
+    ]
   },
+  {
+    name: "Software",
+    bgColor: "bg-green-600",
+    members: [
+      {
+        name: "Shreyaskar Ganguly",
+        committees: ["Software"],
+        image: shreyaskarGangulyImg
+      },
+      {
+        name: "Arka Ghosh",
+        committees: ["Software", "Events Reports"], 
+        image: arkaGhoshImg
+      },
+      {
+        name: "Saheli Deb",
+        committees: ["Software"],
+        image: saheliDebImg
+      },
+      {
+        name: "Sayan Chatterjee",
+        committees: ["Software", "Event Reports"],
+        image: sayanChatterjeeImg
+      }
+    ]
+  },
+  {
+    name: "Inventory & Documentation",
+    bgColor: "bg-yellow-600",
+    members: [
+      {
+        name: "Prasunita De",
+        committees: ["Inventory & Documentation"],
+        image: prasunitaDeImg
+      },
+      {
+        name: "Ritabhasa Chowdhury", 
+        committees: ["Inventory & Documentation"],
+        image: ritabhasaChowdhuryImg
+      }
+    ]
+  },
+  {
+    name: "Social Media / Collaboration",
+    bgColor: "bg-pink-600",
+    members: [
+      {
+        name: "Sulagna Roy",
+        committees: ["Social Media / Collaboration"],
+        image: sulagnRoyImg
+      },
+      {
+        name: "Sreshtha Hira",
+        committees: ["Social Media / Collaboration", "Event Reports"],
+        image: sreshthaHiraImg
+      }
+    ]
+  },
+  {
+    name: "Graphics",
+    bgColor: "bg-purple-600", 
+    members: [
+      {
+        name: "Rupsha Ghosal",
+        committees: ["Graphics"],
+        image: rupshaGhosalImg
+      },
+      {
+        name: "Nirmalya Kusum Ghosh",
+        committees: ["Graphics"], 
+        image: nirmalyaKusumGhoshImg
+      },
+      {
+        name: "Iman Das",
+        committees: ["Graphics"],
+        image: imanDasImg
+      },
+      {
+        name: "Anwesha Ghosh",
+        committees: ["Graphics"],
+        image: anweshaGhoshImg
+      }
+    ]
+  },
+  {
+    name: "Entrepreneurship",
+    bgColor: "bg-indigo-600",
+    members: [
+      {
+        name: "Swastika Talukdar", 
+        committees: ["Entrepreneurship", "Events Reports"],
+        image: swastikaTalukdarImg
+      },
+      {
+        name: "Adrika Lahiri",
+        committees: ["Entrepreneurship"],
+        image: adrikaLahiriImg
+      },
+      {
+        name: "Sumedha Ghosh",
+        committees: ["Entrepreneurship"],
+        image: sumedhaGhoshImg
+      }
+    ]
+  },
+  {
+    name: "Grant in Aid & Publications",
+    bgColor: "bg-teal-600",
+    members: [
+      {
+        name: "Sanga Bhattacharya",
+        committees: ["Grant in Aid & Publications"],
+        image: sangaBhattacharyaImg
+      },
+      {
+        name: "Rumani Sadhukhan",
+        committees: ["Grant in Aid & Publications"], 
+        image: rumaniSadhukhanImg
+      },
+      {
+        name: "Souptik Biswas",
+        committees: ["Grant in Aid & Publications"],
+        image: souptikBiswasImg
+      },
+      {
+        name: "Tanisha Chakrabarti",
+        committees: ["Grant in Aid & Publications"],
+        image: tanishaChakrabartiImg
+      }
+    ]
+  },
+  {
+    name: "Events",
+    bgColor: "bg-cyan-600",
+    members: [
+      {
+        name: "Pratyush Kumar Dey",
+        committees: ["Events"],
+        image: pratyushKumarDeyImg
+      },
+      {
+        name: "Prayas Roy",
+        committees: ["Events"], 
+        image: prayasRoyImg
+      }
+    ]
+  }
 ];
 
 export default function Team() {
@@ -131,28 +335,54 @@ export default function Team() {
               Student Members
             </h2>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {studentMembers.map((student, index) => (
-                <Card key={index} className="shadow-lg hover:shadow-xl transition-shadow border-l-4 border-iedc-light-blue">
-                  <CardContent className="p-6">
-                    <div className="text-center">
-                      <div className={`w-16 h-16 ${student.bgColor} rounded-full flex items-center justify-center mx-auto mb-4`}>
-                        <student.icon className="text-white h-8 w-8" />
-                      </div>
-                      <h3 className="text-lg font-bold iedc-gray mb-2">{student.name}</h3>
-                      <div className="mb-3">
-                        <p className="font-semibold iedc-blue text-sm mb-1">Designation</p>
-                        <p className="text-gray-700 text-sm">{student.designation}</p>
-                      </div>
-                      <div>
-                        <p className="font-semibold iedc-blue text-sm mb-1">Bio</p>
-                        <p className="text-gray-600 text-sm leading-relaxed">{student.bio}</p>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
+            {/* Committee Sections */}
+            {studentCommittees.map((committee, committeeIndex) => (
+              <div key={committeeIndex} className="mb-12">
+                <div className="flex items-center mb-6">
+                  <div className={`w-4 h-4 ${committee.bgColor} rounded-full mr-3`}></div>
+                  <h3 className="text-2xl font-bold iedc-gray">{committee.name}</h3>
+                  <Badge className={`ml-4 ${committee.bgColor} text-white text-xs`}>
+                    {committee.members.length} member{committee.members.length !== 1 ? 's' : ''}
+                  </Badge>
+                </div>
+                
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                  {committee.members.map((member, memberIndex) => (
+                    <Card key={memberIndex} className={`shadow-lg hover:shadow-xl transition-shadow border-l-4 ${committee.bgColor.replace('bg-', 'border-')}`}>
+                      <CardContent className="p-6">
+                        <div className="text-center">
+                          {/* Student Photo */}
+                          <div className="w-20 h-20 rounded-full overflow-hidden mx-auto mb-4 bg-gray-100">
+                            <img 
+                              src={member.image} 
+                              alt={member.name}
+                              className="w-full h-full object-cover"
+                            />
+                          </div>
+                          
+                          <h4 className="text-lg font-bold iedc-gray mb-2">{member.name}</h4>
+                          
+                          {/* Committees */}
+                          <div className="mb-3">
+                            <p className="font-semibold iedc-blue text-xs mb-2">Sub-Committee{member.committees.length > 1 ? 's' : ''}</p>
+                            <div className="flex flex-wrap justify-center gap-1">
+                              {member.committees.map((comm, commIndex) => (
+                                <Badge 
+                                  key={commIndex} 
+                                  className={`text-xs px-2 py-1 ${commIndex === 0 ? committee.bgColor + ' text-white' : 'bg-gray-200 text-gray-700'}`}
+                                >
+                                  {comm}
+                                </Badge>
+                              ))}
+                            </div>
+                          </div>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  ))}
+                </div>
+              </div>
+            ))}
           </div>
 
           {/* Call to Action */}

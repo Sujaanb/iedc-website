@@ -1,0 +1,246 @@
+{
+  "Operation": [
+    {
+      "name": "Sagnik Chakraborty",
+      "primary_committee": "Operation",
+      "all_committees": [
+        "Operation"
+      ],
+      "image": "student_images/sagnik_chakraborty.jpg"
+    }
+  ],
+  "Hardware": [
+    {
+      "name": "Shrayas Mitra",
+      "primary_committee": "Hardware",
+      "all_committees": [
+        "Management",
+        "Hardware"
+      ],
+      "image": "student_images/shrayas_mitra.jpeg"
+    },
+    {
+      "name": "SAGNIK ADHIKARY",
+      "primary_committee": "Hardware",
+      "all_committees": [
+        "Hardware"
+      ],
+      "image": "student_images/sagnik_adhikary.jpg"
+    }
+  ],
+  "Management": [
+    {
+      "name": "SNEHANGSHU DE",
+      "primary_committee": "Management",
+      "all_committees": [
+        "Events",
+        "Management",
+        "Social Media / Collaboration"
+      ],
+      "image": "student_images/snehangshu_de.jpg"
+    },
+    {
+      "name": "Aditi Rai",
+      "primary_committee": "Management",
+      "all_committees": [
+        "Management"
+      ],
+      "image": "student_images/aditi_rai.jpg"
+    },
+    {
+      "name": "Deep Batabyal",
+      "primary_committee": "Management",
+      "all_committees": [
+        "Management"
+      ],
+      "image": "student_images/deep_batabyal.jpeg"
+    }
+  ],
+  "Software": [
+    {
+      "name": "Shreyaskar Ganguly",
+      "primary_committee": "Software",
+      "all_committees": [
+        "Software"
+      ],
+      "image": "student_images/shreyaskar_ganguly.jpg"
+    },
+    {
+      "name": "Arka Ghosh",
+      "primary_committee": "Software",
+      "all_committees": [
+        "Software",
+        "events reports"
+      ],
+      "image": "student_images/arka_ghosh.jpg"
+    },
+    {
+      "name": "Saheli Deb",
+      "primary_committee": "Software",
+      "all_committees": [
+        "Software"
+      ],
+      "image": "student_images/saheli_deb.jpg"
+    },
+    {
+      "name": "Sayan Chatterjee",
+      "primary_committee": "Software",
+      "all_committees": [
+        "Software",
+        "Event Reports"
+      ],
+      "image": "student_images/sayan_chatterjee.jpg"
+    }
+  ],
+  "Inventory & Documentation": [
+    {
+      "name": "Prasunita De",
+      "primary_committee": "Inventory & Documentation",
+      "all_committees": [
+        "Inventory & Documentation"
+      ],
+      "image": "student_images/prasunita_de.jpg"
+    },
+    {
+      "name": "Ritabhasa Chowdhury",
+      "primary_committee": "Inventory & Documentation",
+      "all_committees": [
+        "Inventory & Documentation"
+      ],
+      "image": "student_images/ritabhasa_chowdhury.jpg"
+    }
+  ],
+  "Social Media / Collaboration": [
+    {
+      "name": "Sulagna Roy",
+      "primary_committee": "Social Media / Collaboration",
+      "all_committees": [
+        "Social Media / Collaboration"
+      ],
+      "image": "student_images/sulagna_roy.jpg"
+    },
+    {
+      "name": "Sreshtha Hira",
+      "primary_committee": "Social Media / Collaboration",
+      "all_committees": [
+        "Social Media / Collaboration",
+        "Event Reports"
+      ],
+      "image": "student_images/sreshtha_hira.jpeg"
+    }
+  ],
+  "Graphics": [
+    {
+      "name": "Rupsha Ghosal",
+      "primary_committee": "Graphics",
+      "all_committees": [
+        "Graphics"
+      ],
+      "image": "student_images/rupsha_ghosal.jpg"
+    },
+    {
+      "name": "Nirmalya Kusum Ghosh",
+      "primary_committee": "Graphics",
+      "all_committees": [
+        "Graphics"
+      ],
+      "image": "student_images/nirmalya_kusum_ghosh.jpg"
+    },
+    {
+      "name": "Iman Das",
+      "primary_committee": "Graphics",
+      "all_committees": [
+        "Graphics"
+      ],
+      "image": "student_images/iman_das.jpeg"
+    },
+    {
+      "name": "ANWESHA GHOSH",
+      "primary_committee": "Graphics",
+      "all_committees": [
+        "Graphics"
+      ],
+      "image": "student_images/anwesha_ghosh.jpg"
+    }
+  ],
+  "Entrepreneurship": [
+    {
+      "name": "Swastika Talukdar",
+      "primary_committee": "Entrepreneurship",
+      "all_committees": [
+        "Entrepreneurship",
+        "Events Reports"
+      ],
+      "image": "student_images/swastika_talukdar.jpg"
+    },
+    {
+      "name": "Adrika Lahiri",
+      "primary_committee": "Entrepreneurship",
+      "all_committees": [
+        "Entrepreneurship"
+      ],
+      "image": "student_images/adrika_lahiri.jpg"
+    },
+    {
+      "name": "Sumedha Ghosh",
+      "primary_committee": "Entrepreneurship",
+      "all_committees": [
+        "Entrepreneurship"
+      ],
+      "image": "student_images/sumedha_ghosh.jpeg"
+    }
+  ],
+  "Grant in Aid & Publications": [
+    {
+      "name": "Sanga Bhattacharya",
+      "primary_committee": "Grant in Aid & Publications",
+      "all_committees": [
+        "Grant in Aid & Publications"
+      ],
+      "image": "student_images/sanga_bhattacharya.png"
+    },
+    {
+      "name": "Rumani Sadhukhan",
+      "primary_committee": "Grant in Aid & Publications",
+      "all_committees": [
+        "Grant in Aid & Publications"
+      ],
+      "image": "student_images/rumani_sadhukhan.png"
+    },
+    {
+      "name": "Souptik  Biswas",
+      "primary_committee": "Grant in Aid & Publications",
+      "all_committees": [
+        "Grant in Aid & Publications"
+      ],
+      "image": "student_images/souptik_biswas.jpeg"
+    },
+    {
+      "name": "Tanisha Chakrabarti",
+      "primary_committee": "Grant in Aid & Publications",
+      "all_committees": [
+        "Grant in Aid & Publications"
+      ],
+      "image": "student_images/tanisha_chakrabarti.png"
+    }
+  ],
+  "Events": [
+    {
+      "name": "Pratyush Kumar Dey",
+      "primary_committee": "Events",
+      "all_committees": [
+        "Events"
+      ],
+      "image": "student_images/pratyush_kumar_dey.jpg"
+    },
+    {
+      "name": "Prayas Roy",
+      "primary_committee": "Events",
+      "all_committees": [
+        "Events"
+      ],
+      "image": "student_images/prayas_roy.jpeg"
+    }
+  ],
+  "Events Reports": []
+}
