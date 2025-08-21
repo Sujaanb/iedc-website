@@ -70,7 +70,7 @@ const facultyMembers = [
   },
 ];
 
-// Student members organized by sub-committee hierarchy
+// Student members organized by sub-committee hierarchy - students appear in ALL their committees
 const studentCommittees = [
   {
     name: "Operation",
@@ -104,11 +104,6 @@ const studentCommittees = [
     bgColor: "bg-blue-600", 
     members: [
       {
-        name: "Snehangshu De",
-        committees: ["Events", "Management", "Social Media / Collaboration"],
-        image: snehangshuDeImg
-      },
-      {
         name: "Aditi Rai", 
         committees: ["Management"],
         image: aditiRaiImg
@@ -117,6 +112,11 @@ const studentCommittees = [
         name: "Deep Batabyal",
         committees: ["Management"],
         image: deepBatabyalImg
+      },
+      {
+        name: "Shrayas Mitra",
+        committees: ["Management", "Hardware"],
+        image: shrayasMitraImg
       }
     ]
   },
@@ -141,7 +141,7 @@ const studentCommittees = [
       },
       {
         name: "Sayan Chatterjee",
-        committees: ["Software", "Event Reports"],
+        committees: ["Software", "Events Reports"],
         image: sayanChatterjeeImg
       }
     ]
@@ -167,13 +167,18 @@ const studentCommittees = [
     bgColor: "bg-pink-600",
     members: [
       {
+        name: "Snehangshu De",
+        committees: ["Events", "Social Media / Collaboration"],
+        image: snehangshuDeImg
+      },
+      {
         name: "Sulagna Roy",
         committees: ["Social Media / Collaboration"],
         image: sulagnRoyImg
       },
       {
         name: "Sreshtha Hira",
-        committees: ["Social Media / Collaboration", "Event Reports"],
+        committees: ["Social Media / Collaboration", "Events Reports"],
         image: sreshthaHiraImg
       }
     ]
@@ -261,9 +266,35 @@ const studentCommittees = [
         image: pratyushKumarDeyImg
       },
       {
+        name: "Snehangshu De",
+        committees: ["Events", "Social Media / Collaboration"],
+        image: snehangshuDeImg
+      },
+      {
         name: "Prayas Roy",
         committees: ["Events"], 
         image: prayasRoyImg
+      }
+    ]
+  },
+  {
+    name: "Events Reports",
+    bgColor: "bg-slate-600",
+    members: [
+      {
+        name: "Swastika Talukdar", 
+        committees: ["Entrepreneurship", "Events Reports"],
+        image: swastikaTalukdarImg
+      },
+      {
+        name: "Sreshtha Hira",
+        committees: ["Social Media / Collaboration", "Events Reports"],
+        image: sreshthaHiraImg
+      },
+      {
+        name: "Sayan Chatterjee",
+        committees: ["Software", "Events Reports"],
+        image: sayanChatterjeeImg
       }
     ]
   }
