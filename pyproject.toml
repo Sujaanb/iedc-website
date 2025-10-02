@@ -1,7 +1,7 @@
 [project]
-name = "repl-nix-workspace"
-version = "0.1.0"
-description = "Add your description here"
+name = "iedc-website"
+version = "1.0.0"
+description = "IEDC IEM Salt Lake - Innovation and Entrepreneurship Development Center Website"
 requires-python = ">=3.11"
 dependencies = [
     "openpyxl>=3.1.5",

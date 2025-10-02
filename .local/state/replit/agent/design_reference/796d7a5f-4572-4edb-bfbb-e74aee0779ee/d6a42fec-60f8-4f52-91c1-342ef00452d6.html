@@ -1,0 +1,920 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IEDC - Innovation and Entrepreneurship Development Center</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'iedc-blue': '#1E40AF',
+                        'iedc-light-blue': '#3B82F6',
+                        'iedc-gray': '#1F2937',
+                        'iedc-light-gray': '#F8FAFC',
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'ui-sans-serif', 'system-ui'],
+                    }
+                }
+            }
+        };
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-iedc-light-gray font-sans">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex-shrink-0 cursor-pointer" onclick="showPage('home')">
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-iedc-blue rounded-lg flex items-center justify-center mr-3">
+                            <i class="fas fa-lightbulb text-white text-lg"></i>
+                        </div>
+                        <div>
+                            <div class="text-lg font-bold text-iedc-blue">IEDC</div>
+                            <div class="text-xs text-gray-600">IEM Salt Lake</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="#" onclick="showPage('home')" class="nav-link text-iedc-gray hover:text-iedc-blue px-3 py-2 rounded-md text-sm font-medium transition-colors">Home</a>
+                        <a href="#" onclick="showPage('about')" class="nav-link text-iedc-gray hover:text-iedc-blue px-3 py-2 rounded-md text-sm font-medium transition-colors">About</a>
+                        <a href="#" onclick="showPage('vision')" class="nav-link text-iedc-gray hover:text-iedc-blue px-3 py-2 rounded-md text-sm font-medium transition-colors">Vision</a>
+                        <a href="#" onclick="showPage('mission')" class="nav-link text-iedc-gray hover:text-iedc-blue px-3 py-2 rounded-md text-sm font-medium transition-colors">Mission</a>
+                        <a href="#" onclick="showPage('team')" class="nav-link text-iedc-gray hover:text-iedc-blue px-3 py-2 rounded-md text-sm font-medium transition-colors">Team</a>
+                        <a href="#" onclick="showPage('startups')" class="nav-link text-iedc-gray hover:text-iedc-blue px-3 py-2 rounded-md text-sm font-medium transition-colors">Start-ups</a>
+                        <a href="#" onclick="showPage('gallery')" class="nav-link text-iedc-gray hover:text-iedc-blue px-3 py-2 rounded-md text-sm font-medium transition-colors">Gallery</a>
+                        <a href="#" onclick="showPage('contact')" class="nav-link text-iedc-gray hover:text-iedc-blue px-3 py-2 rounded-md text-sm font-medium transition-colors">Contact</a>
+                    </div>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button onclick="toggleMobileMenu()" class="text-iedc-gray hover:text-iedc-blue focus:outline-none focus:text-iedc-blue">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div id="mobile-menu" class="md:hidden hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">
+                <a href="#" onclick="showPage('home')" class="nav-link block px-3 py-2 text-base font-medium text-iedc-gray hover:text-iedc-blue transition-colors">Home</a>
+                <a href="#" onclick="showPage('about')" class="nav-link block px-3 py-2 text-base font-medium text-iedc-gray hover:text-iedc-blue transition-colors">About</a>
+                <a href="#" onclick="showPage('vision')" class="nav-link block px-3 py-2 text-base font-medium text-iedc-gray hover:text-iedc-blue transition-colors">Vision</a>
+                <a href="#" onclick="showPage('mission')" class="nav-link block px-3 py-2 text-base font-medium text-iedc-gray hover:text-iedc-blue transition-colors">Mission</a>
+                <a href="#" onclick="showPage('team')" class="nav-link block px-3 py-2 text-base font-medium text-iedc-gray hover:text-iedc-blue transition-colors">Team</a>
+                <a href="#" onclick="showPage('startups')" class="nav-link block px-3 py-2 text-base font-medium text-iedc-gray hover:text-iedc-blue transition-colors">Start-ups</a>
+                <a href="#" onclick="showPage('gallery')" class="nav-link block px-3 py-2 text-base font-medium text-iedc-gray hover:text-iedc-blue transition-colors">Gallery</a>
+                <a href="#" onclick="showPage('contact')" class="nav-link block px-3 py-2 text-base font-medium text-iedc-gray hover:text-iedc-blue transition-colors">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- @COMPONENT: HomePage -->
+        <div id="home-page" class="page-content">
+            <!-- Hero Section -->
+            <section class="bg-gradient-to-r from-iedc-blue to-iedc-light-blue text-white">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+                    <div class="text-center">
+                        <h1 class="text-4xl md:text-6xl font-bold mb-6">Innovation and Entrepreneurship Development Center</h1>
+                        <p class="text-xl md:text-2xl mb-4">IEM Salt Lake</p>
+                        <div class="inline-block bg-white bg-opacity-20 px-6 py-2 rounded-full">
+                            <span class="text-lg font-semibold">Year of Inception: 2014</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Quick Links Section -->
+            <section class="py-16 bg-white">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-iedc-gray">Quick Links</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <div onclick="showPage('about')" class="bg-iedc-light-gray p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow cursor-pointer group">
+                            <div class="text-iedc-blue text-3xl mb-4 group-hover:scale-110 transition-transform">
+                                <i class="fas fa-info-circle"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold mb-2 text-iedc-gray">About Us</h3>
+                            <p class="text-gray-600">Learn about our mission and objectives</p>
+                        </div>
+                        <div onclick="showPage('vision')" class="bg-iedc-light-gray p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow cursor-pointer group">
+                            <div class="text-iedc-blue text-3xl mb-4 group-hover:scale-110 transition-transform">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold mb-2 text-iedc-gray">Vision</h3>
+                            <p class="text-gray-600">Our vision for the future</p>
+                        </div>
+                        <div onclick="showPage('mission')" class="bg-iedc-light-gray p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow cursor-pointer group">
+                            <div class="text-iedc-blue text-3xl mb-4 group-hover:scale-110 transition-transform">
+                                <i class="fas fa-target"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold mb-2 text-iedc-gray">Mission</h3>
+                            <p class="text-gray-600">Our commitment to excellence</p>
+                        </div>
+                        <div onclick="showPage('team')" class="bg-iedc-light-gray p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow cursor-pointer group">
+                            <div class="text-iedc-blue text-3xl mb-4 group-hover:scale-110 transition-transform">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold mb-2 text-iedc-gray">Team</h3>
+                            <p class="text-gray-600">Meet our leadership team</p>
+                        </div>
+                        <div onclick="showPage('startups')" class="bg-iedc-light-gray p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow cursor-pointer group">
+                            <div class="text-iedc-blue text-3xl mb-4 group-hover:scale-110 transition-transform">
+                                <i class="fas fa-rocket"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold mb-2 text-iedc-gray">Start-ups</h3>
+                            <p class="text-gray-600">Companies we've incubated</p>
+                        </div>
+                        <div onclick="showPage('gallery')" class="bg-iedc-light-gray p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow cursor-pointer group">
+                            <div class="text-iedc-blue text-3xl mb-4 group-hover:scale-110 transition-transform">
+                                <i class="fas fa-images"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold mb-2 text-iedc-gray">Gallery</h3>
+                            <p class="text-gray-600">Our activities and events</p>
+                        </div>
+                        <div onclick="showPage('contact')" class="bg-iedc-light-gray p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow cursor-pointer group">
+                            <div class="text-iedc-blue text-3xl mb-4 group-hover:scale-110 transition-transform">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold mb-2 text-iedc-gray">Contact</h3>
+                            <p class="text-gray-600">Get in touch with us</p>
+                        </div>
+                        <div class="bg-iedc-light-gray p-6 rounded-lg shadow-md">
+                            <div class="text-iedc-blue text-3xl mb-4">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold mb-2 text-iedc-gray">Innovation Hub</h3>
+                            <p class="text-gray-600">Cutting-edge technology development</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Statistics Section -->
+            <section class="py-16 bg-iedc-blue text-white">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                        <div>
+                            <div class="text-4xl md:text-5xl font-bold mb-2">10+</div>
+                            <div class="text-lg">Years of Excellence</div>
+                        </div>
+                        <div>
+                            <div class="text-4xl md:text-5xl font-bold mb-2">8</div>
+                            <div class="text-lg">Start-ups Incubated</div>
+                        </div>
+                        <div>
+                            <div class="text-4xl md:text-5xl font-bold mb-2">100+</div>
+                            <div class="text-lg">Students Mentored</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- @END_COMPONENT: HomePage -->
+
+        <!-- @COMPONENT: AboutPage -->
+        <div id="about-page" class="page-content hidden">
+            <section class="py-16 bg-white">
+                <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center mb-12">
+                        <h1 class="text-4xl md:text-5xl font-bold text-iedc-gray mb-6">About Us</h1>
+                        <div class="w-24 h-1 bg-iedc-blue mx-auto"></div>
+                    </div>
+                    
+                    <div class="bg-iedc-light-gray rounded-lg p-8 md:p-12 shadow-lg">
+                        <div class="text-center mb-8">
+                            <div class="w-16 h-16 bg-iedc-blue rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-lightbulb text-white text-2xl"></i>
+                            </div>
+                        </div>
+                        <blockquote class="text-lg md:text-xl leading-relaxed text-iedc-gray italic text-center">
+                            "To promote research, product development and business incubation ecosystem for the students – fostering a trained and skilled student community that will work in cutting edge technologies and build new-age businesses to solve technological challenges for making the earth a better place for all living objects."
+                        </blockquote>
+                    </div>
+
+                    <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div class="text-center">
+                            <div class="w-12 h-12 bg-iedc-light-blue rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-cogs text-white"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold mb-2 text-iedc-gray">Research</h3>
+                            <p class="text-gray-600">Cutting-edge research in emerging technologies</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="w-12 h-12 bg-iedc-light-blue rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-rocket text-white"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold mb-2 text-iedc-gray">Innovation</h3>
+                            <p class="text-gray-600">Product development and business solutions</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="w-12 h-12 bg-iedc-light-blue rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-users text-white"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold mb-2 text-iedc-gray">Community</h3>
+                            <p class="text-gray-600">Fostering skilled student communities</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- @END_COMPONENT: AboutPage -->
+
+        <!-- @COMPONENT: VisionPage -->
+        <div id="vision-page" class="page-content hidden">
+            <section class="py-16 bg-gradient-to-br from-iedc-blue to-iedc-light-blue text-white">
+                <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-8">Our Vision</h1>
+                    <div class="w-24 h-1 bg-white mx-auto mb-12"></div>
+                </div>
+            </section>
+
+            <section class="py-16 bg-white">
+                <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="bg-iedc-light-gray rounded-lg p-8 md:p-12 shadow-lg">
+                        <div class="text-center mb-8">
+                            <div class="w-20 h-20 bg-iedc-blue rounded-full flex items-center justify-center mx-auto mb-6">
+                                <i class="fas fa-eye text-white text-3xl"></i>
+                            </div>
+                            <h2 class="text-2xl md:text-3xl font-bold text-iedc-gray mb-6">Vision Statement</h2>
+                        </div>
+                        <blockquote class="text-lg md:text-xl leading-relaxed text-iedc-gray text-center">
+                            "To promote research, product development and business incubation ecosystem for the students – fostering a trained and skilled student community that will work in cutting edge technologies and build new-age businesses to solve technological challenges for making the earth a better place for all living objects."
+                        </blockquote>
+                    </div>
+
+                    <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <h3 class="text-xl font-semibold mb-4 text-iedc-gray flex items-center">
+                                <i class="fas fa-globe text-iedc-blue mr-3"></i>
+                                Global Impact
+                            </h3>
+                            <p class="text-gray-600">Creating solutions that benefit all living beings on Earth through innovative technology.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <h3 class="text-xl font-semibold mb-4 text-iedc-gray flex items-center">
+                                <i class="fas fa-graduation-cap text-iedc-blue mr-3"></i>
+                                Student Development
+                            </h3>
+                            <p class="text-gray-600">Building a skilled community of students ready for tomorrow's challenges.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <h3 class="text-xl font-semibold mb-4 text-iedc-gray flex items-center">
+                                <i class="fas fa-microchip text-iedc-blue mr-3"></i>
+                                Cutting-edge Tech
+                            </h3>
+                            <p class="text-gray-600">Working with the latest technologies to solve real-world problems.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <h3 class="text-xl font-semibold mb-4 text-iedc-gray flex items-center">
+                                <i class="fas fa-handshake text-iedc-blue mr-3"></i>
+                                Business Ecosystem
+                            </h3>
+                            <p class="text-gray-600">Creating a supportive environment for new-age business development.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- @END_COMPONENT: VisionPage -->
+
+        <!-- @COMPONENT: MissionPage -->
+        <div id="mission-page" class="page-content hidden">
+            <section class="py-16 bg-gradient-to-br from-iedc-light-blue to-iedc-blue text-white">
+                <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-8">Our Mission</h1>
+                    <div class="w-24 h-1 bg-white mx-auto mb-12"></div>
+                </div>
+            </section>
+
+            <section class="py-16 bg-white">
+                <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="bg-iedc-light-gray rounded-lg p-8 md:p-12 shadow-lg mb-12">
+                        <div class="text-center mb-8">
+                            <div class="w-20 h-20 bg-iedc-blue rounded-full flex items-center justify-center mx-auto mb-6">
+                                <i class="fas fa-target text-white text-3xl"></i>
+                            </div>
+                            <h2 class="text-2xl md:text-3xl font-bold text-iedc-gray mb-6">Mission Statement</h2>
+                        </div>
+                        <blockquote class="text-lg md:text-xl leading-relaxed text-iedc-gray text-center">
+                            "The IEDC at IEM is committed to fostering a culture of research and product development among students. Its primary objective is to nurture a student community proficient in cutting-edge technologies through creativity and innovation. Under the mentorship of faculty members, students at the IEDC work in diverse fields including Robotics, IoT, RF & Microwave, Machine Learning, AI, Augmented Reality, Virtual Reality, and unmanned aerial and ground vehicles. The center strives to create an ecosystem that encourages entrepreneurship and innovation."
+                        </blockquote>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                            <div class="text-iedc-blue text-2xl mb-4">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <h3 class="text-lg font-semibold mb-2 text-iedc-gray">Robotics</h3>
+                            <p class="text-gray-600 text-sm">Advanced robotics systems and automation</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                            <div class="text-iedc-blue text-2xl mb-4">
+                                <i class="fas fa-wifi"></i>
+                            </div>
+                            <h3 class="text-lg font-semibold mb-2 text-iedc-gray">IoT</h3>
+                            <p class="text-gray-600 text-sm">Internet of Things and connected devices</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                            <div class="text-iedc-blue text-2xl mb-4">
+                                <i class="fas fa-broadcast-tower"></i>
+                            </div>
+                            <h3 class="text-lg font-semibold mb-2 text-iedc-gray">RF & Microwave</h3>
+                            <p class="text-gray-600 text-sm">Radio frequency and microwave technology</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                            <div class="text-iedc-blue text-2xl mb-4">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <h3 class="text-lg font-semibold mb-2 text-iedc-gray">Machine Learning</h3>
+                            <p class="text-gray-600 text-sm">Advanced ML algorithms and applications</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                            <div class="text-iedc-blue text-2xl mb-4">
+                                <i class="fas fa-microchip"></i>
+                            </div>
+                            <h3 class="text-lg font-semibold mb-2 text-iedc-gray">AI</h3>
+                            <p class="text-gray-600 text-sm">Artificial Intelligence solutions</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                            <div class="text-iedc-blue text-2xl mb-4">
+                                <i class="fas fa-vr-cardboard"></i>
+                            </div>
+                            <h3 class="text-lg font-semibold mb-2 text-iedc-gray">AR/VR</h3>
+                            <p class="text-gray-600 text-sm">Augmented and Virtual Reality systems</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- @END_COMPONENT: MissionPage -->
+
+        <!-- @COMPONENT: TeamPage -->
+        <div id="team-page" class="page-content hidden">
+            <section class="py-16 bg-gradient-to-r from-iedc-blue to-iedc-light-blue text-white">
+                <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-8">Our Team</h1>
+                    <p class="text-xl">Meet the leadership driving innovation at IEDC</p>
+                    <div class="w-24 h-1 bg-white mx-auto mt-8"></div>
+                </div>
+            </section>
+
+            <section class="py-16 bg-white">
+                <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <h2 class="text-3xl font-bold text-center mb-12 text-iedc-gray">Composition of the Centre</h2>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                        <!-- Coordinator -->
+                        <div class="bg-iedc-light-gray rounded-lg p-8 shadow-lg hover:shadow-xl transition-shadow">
+                            <div class="text-center">
+                                <div class="w-24 h-24 bg-iedc-blue rounded-full flex items-center justify-center mx-auto mb-6">
+                                    <i class="fas fa-user-tie text-white text-3xl"></i>
+                                </div>
+                                <h3 class="text-2xl font-bold text-iedc-gray mb-2">Prof. Dr. Subhabrata Banerjee</h3>
+                                <div class="text-iedc-blue font-semibold mb-4">
+                                    <div>Coordinator, IEDC IEM Salt Lake</div>
+                                    <div>Professor, ECE Department</div>
+                                </div>
+                                <div class="flex items-center justify-center text-gray-600">
+                                    <i class="fas fa-envelope mr-2"></i>
+                                    <span class="text-sm" data-mock="true">s.banerjee@iemcal.com</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Assistant Coordinator -->
+                        <div class="bg-iedc-light-gray rounded-lg p-8 shadow-lg hover:shadow-xl transition-shadow">
+                            <div class="text-center">
+                                <div class="w-24 h-24 bg-iedc-light-blue rounded-full flex items-center justify-center mx-auto mb-6">
+                                    <i class="fas fa-user-graduate text-white text-3xl"></i>
+                                </div>
+                                <h3 class="text-2xl font-bold text-iedc-gray mb-2">Prof. Dr. Indranil Maity</h3>
+                                <div class="text-iedc-blue font-semibold mb-4">
+                                    <div>Assistant-Coordinator, IEDC IEM Salt Lake</div>
+                                    <div>Associate Professor, ECE Department</div>
+                                </div>
+                                <div class="flex items-center justify-center text-gray-600">
+                                    <i class="fas fa-envelope mr-2"></i>
+                                    <span class="text-sm" data-mock="true">i.maity@iemcal.com</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Additional Information -->
+                    <div class="mt-16 text-center">
+                        <div class="bg-iedc-blue text-white rounded-lg p-8 max-w-2xl mx-auto">
+                            <h3 class="text-2xl font-bold mb-4">Faculty Mentorship</h3>
+                            <p class="text-lg leading-relaxed">
+                                Our experienced faculty members provide dedicated mentorship to students, guiding them through cutting-edge research and innovation projects across multiple technology domains.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- @END_COMPONENT: TeamPage -->
+
+        <!-- @COMPONENT: StartupsPage -->
+        <div id="startups-page" class="page-content hidden">
+            <section class="py-16 bg-gradient-to-r from-iedc-light-blue to-iedc-blue text-white">
+                <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-8">Start-ups Incubated</h1>
+                    <p class="text-xl">Innovative companies we've nurtured from concept to reality</p>
+                    <div class="w-24 h-1 bg-white mx-auto mt-8"></div>
+                </div>
+            </section>
+
+            <section class="py-16 bg-white">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <!-- Desktop Table -->
+                    <div class="hidden lg:block overflow-x-auto shadow-lg rounded-lg">
+                        <table class="w-full bg-white">
+                            <thead class="bg-iedc-blue text-white">
+                                <tr>
+                                    <th class="px-6 py-4 text-left text-sm font-semibold uppercase tracking-wider">Sl. No.</th>
+                                    <th class="px-6 py-4 text-left text-sm font-semibold uppercase tracking-wider">Company Name</th>
+                                    <th class="px-6 py-4 text-left text-sm font-semibold uppercase tracking-wider">Objective</th>
+                                    <th class="px-6 py-4 text-left text-sm font-semibold uppercase tracking-wider">Status (License)</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-gray-200">
+                                <tr class="hover:bg-iedc-light-gray transition-colors">
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-iedc-gray">1</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-semibold text-iedc-blue">Consultalk</td>
+                                    <td class="px-6 py-4 text-sm text-iedc-gray">Online mock test series for WBJEE aspirants</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-green-600 font-medium">Trade License 006553</td>
+                                </tr>
+                                <tr class="hover:bg-iedc-light-gray transition-colors">
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-iedc-gray">2</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-semibold text-iedc-blue">Rise & Shine Tech Library</td>
+                                    <td class="px-6 py-4 text-sm text-iedc-gray">Online books platform with AI-based recommendations</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-green-600 font-medium">Trade License 006554</td>
+                                </tr>
+                                <tr class="hover:bg-iedc-light-gray transition-colors">
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-iedc-gray">3</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-semibold text-iedc-blue">ChemGear</td>
+                                    <td class="px-6 py-4 text-sm text-iedc-gray">Precision laboratory equipment for scientific research</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-green-600 font-medium">Trade License 006555</td>
+                                </tr>
+                                <tr class="hover:bg-iedc-light-gray transition-colors">
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-iedc-gray">4</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-semibold text-iedc-blue">Storyline Stitches</td>
+                                    <td class="px-6 py-4 text-sm text-iedc-gray">Online reselling of old books</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-green-600 font-medium">Trade License 006556</td>
+                                </tr>
+                                <tr class="hover:bg-iedc-light-gray transition-colors">
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-iedc-gray">5</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-semibold text-iedc-blue">PixelCraft Creations</td>
+                                    <td class="px-6 py-4 text-sm text-iedc-gray">Creative graphic design solutions</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-green-600 font-medium">Trade License 006575</td>
+                                </tr>
+                                <tr class="hover:bg-iedc-light-gray transition-colors">
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-iedc-gray">6</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-semibold text-iedc-blue">Celestial Courier</td>
+                                    <td class="px-6 py-4 text-sm text-iedc-gray">Drone delivery services for food and groceries</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-green-600 font-medium">Trade License 006558</td>
+                                </tr>
+                                <tr class="hover:bg-iedc-light-gray transition-colors">
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-iedc-gray">7</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-semibold text-iedc-blue">Use For Your Need (U-FYN)</td>
+                                    <td class="px-6 py-4 text-sm text-iedc-gray">Interactive online platform for doctor-patient appointments and health check-ups</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-green-600 font-medium">Trade License 006578</td>
+                                </tr>
+                                <tr class="hover:bg-iedc-light-gray transition-colors">
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-iedc-gray">8</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-semibold text-iedc-blue">Onrique</td>
+                                    <td class="px-6 py-4 text-sm text-iedc-gray">Light-weight jewelry design and manufacturing</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-green-600 font-medium">Trade License 006576</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Mobile Cards -->
+                    <div class="lg:hidden space-y-4">
+                        <div class="bg-white rounded-lg shadow-md p-6 border-l-4 border-iedc-blue">
+                            <div class="flex justify-between items-start mb-3">
+                                <h3 class="text-lg font-bold text-iedc-blue">Consultalk</h3>
+                                <span class="text-xs bg-green-100 text-green-800 px-2 py-1 rounded">License 006553</span>
+                            </div>
+                            <p class="text-gray-600 text-sm mb-2">Online mock test series for WBJEE aspirants</p>
+                            <div class="text-xs text-gray-500">Company #1</div>
+                        </div>
+
+                        <div class="bg-white rounded-lg shadow-md p-6 border-l-4 border-iedc-blue">
+                            <div class="flex justify-between items-start mb-3">
+                                <h3 class="text-lg font-bold text-iedc-blue">Rise & Shine Tech Library</h3>
+                                <span class="text-xs bg-green-100 text-green-800 px-2 py-1 rounded">License 006554</span>
+                            </div>
+                            <p class="text-gray-600 text-sm mb-2">Online books platform with AI-based recommendations</p>
+                            <div class="text-xs text-gray-500">Company #2</div>
+                        </div>
+
+                        <div class="bg-white rounded-lg shadow-md p-6 border-l-4 border-iedc-blue">
+                            <div class="flex justify-between items-start mb-3">
+                                <h3 class="text-lg font-bold text-iedc-blue">ChemGear</h3>
+                                <span class="text-xs bg-green-100 text-green-800 px-2 py-1 rounded">License 006555</span>
+                            </div>
+                            <p class="text-gray-600 text-sm mb-2">Precision laboratory equipment for scientific research</p>
+                            <div class="text-xs text-gray-500">Company #3</div>
+                        </div>
+
+                        <div class="bg-white rounded-lg shadow-md p-6 border-l-4 border-iedc-blue">
+                            <div class="flex justify-between items-start mb-3">
+                                <h3 class="text-lg font-bold text-iedc-blue">Storyline Stitches</h3>
+                                <span class="text-xs bg-green-100 text-green-800 px-2 py-1 rounded">License 006556</span>
+                            </div>
+                            <p class="text-gray-600 text-sm mb-2">Online reselling of old books</p>
+                            <div class="text-xs text-gray-500">Company #4</div>
+                        </div>
+
+                        <div class="bg-white rounded-lg shadow-md p-6 border-l-4 border-iedc-blue">
+                            <div class="flex justify-between items-start mb-3">
+                                <h3 class="text-lg font-bold text-iedc-blue">PixelCraft Creations</h3>
+                                <span class="text-xs bg-green-100 text-green-800 px-2 py-1 rounded">License 006575</span>
+                            </div>
+                            <p class="text-gray-600 text-sm mb-2">Creative graphic design solutions</p>
+                            <div class="text-xs text-gray-500">Company #5</div>
+                        </div>
+
+                        <div class="bg-white rounded-lg shadow-md p-6 border-l-4 border-iedc-blue">
+                            <div class="flex justify-between items-start mb-3">
+                                <h3 class="text-lg font-bold text-iedc-blue">Celestial Courier</h3>
+                                <span class="text-xs bg-green-100 text-green-800 px-2 py-1 rounded">License 006558</span>
+                            </div>
+                            <p class="text-gray-600 text-sm mb-2">Drone delivery services for food and groceries</p>
+                            <div class="text-xs text-gray-500">Company #6</div>
+                        </div>
+
+                        <div class="bg-white rounded-lg shadow-md p-6 border-l-4 border-iedc-blue">
+                            <div class="flex justify-between items-start mb-3">
+                                <h3 class="text-lg font-bold text-iedc-blue">Use For Your Need (U-FYN)</h3>
+                                <span class="text-xs bg-green-100 text-green-800 px-2 py-1 rounded">License 006578</span>
+                            </div>
+                            <p class="text-gray-600 text-sm mb-2">Interactive online platform for doctor-patient appointments and health check-ups</p>
+                            <div class="text-xs text-gray-500">Company #7</div>
+                        </div>
+
+                        <div class="bg-white rounded-lg shadow-md p-6 border-l-4 border-iedc-blue">
+                            <div class="flex justify-between items-start mb-3">
+                                <h3 class="text-lg font-bold text-iedc-blue">Onrique</h3>
+                                <span class="text-xs bg-green-100 text-green-800 px-2 py-1 rounded">License 006576</span>
+                            </div>
+                            <p class="text-gray-600 text-sm mb-2">Light-weight jewelry design and manufacturing</p>
+                            <div class="text-xs text-gray-500">Company #8</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- @END_COMPONENT: StartupsPage -->
+
+        <!-- @COMPONENT: GalleryPage -->
+        <div id="gallery-page" class="page-content hidden">
+            <section class="py-16 bg-gradient-to-r from-iedc-blue to-iedc-light-blue text-white">
+                <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-8">Gallery</h1>
+                    <p class="text-xl">Showcasing our recent activities and achievements</p>
+                    <div class="w-24 h-1 bg-white mx-auto mt-8"></div>
+                </div>
+            </section>
+
+            <section class="py-16 bg-white">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <!-- Featured Image -->
+                    <div class="mb-12">
+                        <!-- Modern technology lab with students working on robotics projects -->
+                        <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&h=600" alt="Students working on robotics projects in modern lab" class="w-full h-96 object-cover rounded-lg shadow-xl" />
+                        <div class="text-center mt-4">
+                            <h3 class="text-xl font-semibold text-iedc-gray">Innovation Lab in Action</h3>
+                            <p class="text-gray-600">Students collaborating on cutting-edge robotics projects</p>
+                        </div>
+                    </div>
+
+                    <!-- Image Grid -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <div class="group cursor-pointer">
+                            <!-- Students presenting their startup pitch to a panel of judges -->
+                            <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" alt="Students presenting startup pitch" class="w-full h-64 object-cover rounded-lg shadow-lg group-hover:shadow-xl transition-shadow" />
+                            <div class="mt-4">
+                                <h4 class="text-lg font-semibold text-iedc-gray">Startup Pitch Day</h4>
+                                <p class="text-gray-600 text-sm">Students presenting innovative business ideas</p>
+                            </div>
+                        </div>
+
+                        <div class="group cursor-pointer">
+                            <!-- Workshop on artificial intelligence and machine learning with laptops and code -->
+                            <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" alt="AI and ML workshop session" class="w-full h-64 object-cover rounded-lg shadow-lg group-hover:shadow-xl transition-shadow" />
+                            <div class="mt-4">
+                                <h4 class="text-lg font-semibold text-iedc-gray">AI/ML Workshop</h4>
+                                <p class="text-gray-600 text-sm">Hands-on training in artificial intelligence</p>
+                            </div>
+                        </div>
+
+                        <div class="group cursor-pointer">
+                            <!-- Team meeting with faculty mentors discussing project development -->
+                            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" alt="Faculty mentorship session" class="w-full h-64 object-cover rounded-lg shadow-lg group-hover:shadow-xl transition-shadow" />
+                            <div class="mt-4">
+                                <h4 class="text-lg font-semibold text-iedc-gray">Faculty Mentorship</h4>
+                                <p class="text-gray-600 text-sm">Collaborative guidance sessions</p>
+                            </div>
+                        </div>
+
+                        <div class="group cursor-pointer">
+                            <!-- IoT devices and sensors demonstration in electronics lab -->
+                            <img src="https://pixabay.com/get/g8b2463ed74276d718a60fc25f986dac6a4154029b3b68e088b67ea09c8afefeeec995ff6821ca1a7d8d5c1620c71bef0329150aa96cac6f72fde271cefd13bdc_1280.jpg" alt="IoT demonstration with sensors and devices" class="w-full h-64 object-cover rounded-lg shadow-lg group-hover:shadow-xl transition-shadow" />
+                            <div class="mt-4">
+                                <h4 class="text-lg font-semibold text-iedc-gray">IoT Innovation</h4>
+                                <p class="text-gray-600 text-sm">Internet of Things project showcase</p>
+                            </div>
+                        </div>
+
+                        <div class="group cursor-pointer">
+                            <!-- Award ceremony with students receiving recognition for innovation -->
+                            <img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" alt="Innovation awards ceremony" class="w-full h-64 object-cover rounded-lg shadow-lg group-hover:shadow-xl transition-shadow" />
+                            <div class="mt-4">
+                                <h4 class="text-lg font-semibold text-iedc-gray">Innovation Awards</h4>
+                                <p class="text-gray-600 text-sm">Recognizing outstanding achievements</p>
+                            </div>
+                        </div>
+
+                        <div class="group cursor-pointer">
+                            <!-- VR/AR demonstration with students wearing headsets -->
+                            <img src="https://images.unsplash.com/photo-1592478411213-6153e4ebc696?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" alt="VR/AR technology demonstration" class="w-full h-64 object-cover rounded-lg shadow-lg group-hover:shadow-xl transition-shadow" />
+                            <div class="mt-4">
+                                <h4 class="text-lg font-semibold text-iedc-gray">VR/AR Experience</h4>
+                                <p class="text-gray-600 text-sm">Immersive technology exploration</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Call to Action -->
+                    <div class="mt-16 text-center">
+                        <div class="bg-iedc-blue text-white rounded-lg p-8 max-w-2xl mx-auto">
+                            <h3 class="text-2xl font-bold mb-4">Join Our Innovation Journey</h3>
+                            <p class="text-lg mb-6">
+                                Be part of the next generation of innovators and entrepreneurs. Experience cutting-edge technology and build solutions for tomorrow.
+                            </p>
+                            <button onclick="showPage('contact')" class="bg-white text-iedc-blue px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                                Get In Touch
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- @END_COMPONENT: GalleryPage -->
+
+        <!-- @COMPONENT: ContactPage -->
+        <div id="contact-page" class="page-content hidden">
+            <section class="py-16 bg-gradient-to-r from-iedc-light-blue to-iedc-blue text-white">
+                <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-8">Contact Us</h1>
+                    <p class="text-xl">Get in touch with the IEDC team</p>
+                    <div class="w-24 h-1 bg-white mx-auto mt-8"></div>
+                </div>
+            </section>
+
+            <section class="py-16 bg-white">
+                <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                        <!-- Contact Information -->
+                        <div>
+                            <h2 class="text-3xl font-bold text-iedc-gray mb-8">Get In Touch</h2>
+                            
+                            <div class="space-y-6">
+                                <!-- Address -->
+                                <div class="flex items-start">
+                                    <div class="w-12 h-12 bg-iedc-blue rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                        <i class="fas fa-map-marker-alt text-white"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-lg font-semibold text-iedc-gray mb-2">Address</h3>
+                                        <p class="text-gray-600">
+                                            Y-12 Salt Lake Electronics Complex<br>
+                                            Sector-V, Salt Lake Electronics Complex<br>
+                                            Kolkata – 700 091<br>
+                                            West Bengal, India
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <!-- Phone -->
+                                <div class="flex items-start">
+                                    <div class="w-12 h-12 bg-iedc-light-blue rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                        <i class="fas fa-phone text-white"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-lg font-semibold text-iedc-gray mb-2">Phone</h3>
+                                        <p class="text-gray-600" data-mock="true">+91 33 2357 2450</p>
+                                    </div>
+                                </div>
+
+                                <!-- Email -->
+                                <div class="flex items-start">
+                                    <div class="w-12 h-12 bg-iedc-blue rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                        <i class="fas fa-envelope text-white"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-lg font-semibold text-iedc-gray mb-2">Email</h3>
+                                        <p class="text-gray-600" data-mock="true">iedc@iemcal.com</p>
+                                    </div>
+                                </div>
+
+                                <!-- Social Media -->
+                                <div class="flex items-start">
+                                    <div class="w-12 h-12 bg-iedc-light-blue rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                        <i class="fas fa-share-alt text-white"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-lg font-semibold text-iedc-gray mb-2">Follow Us</h3>
+                                        <div class="flex space-x-4">
+                                            <a href="#" class="text-iedc-blue hover:text-iedc-light-blue transition-colors">
+                                                <i class="fab fa-twitter text-2xl"></i>
+                                            </a>
+                                            <a href="#" class="text-iedc-blue hover:text-iedc-light-blue transition-colors">
+                                                <i class="fab fa-facebook text-2xl"></i>
+                                            </a>
+                                            <a href="#" class="text-iedc-blue hover:text-iedc-light-blue transition-colors">
+                                                <i class="fab fa-linkedin text-2xl"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Contact Form -->
+                        <div class="bg-iedc-light-gray rounded-lg p-8">
+                            <h3 class="text-2xl font-bold text-iedc-gray mb-6">Send us a Message</h3>
+                            <form class="space-y-6">
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    <div>
+                                        <label for="first-name" class="block text-sm font-medium text-iedc-gray mb-2">First Name</label>
+                                        <input type="text" id="first-name" name="first-name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-iedc-blue focus:border-transparent transition-colors" data-mock="true" placeholder="John">
+                                    </div>
+                                    <div>
+                                        <label for="last-name" class="block text-sm font-medium text-iedc-gray mb-2">Last Name</label>
+                                        <input type="text" id="last-name" name="last-name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-iedc-blue focus:border-transparent transition-colors" data-mock="true" placeholder="Doe">
+                                    </div>
+                                </div>
+                                
+                                <div>
+                                    <label for="email" class="block text-sm font-medium text-iedc-gray mb-2">Email</label>
+                                    <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-iedc-blue focus:border-transparent transition-colors" data-mock="true" placeholder="john.doe@example.com">
+                                </div>
+
+                                <div>
+                                    <label for="subject" class="block text-sm font-medium text-iedc-gray mb-2">Subject</label>
+                                    <input type="text" id="subject" name="subject" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-iedc-blue focus:border-transparent transition-colors" data-mock="true" placeholder="Inquiry about IEDC programs">
+                                </div>
+
+                                <div>
+                                    <label for="message" class="block text-sm font-medium text-iedc-gray mb-2">Message</label>
+                                    <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-iedc-blue focus:border-transparent transition-colors resize-none" data-mock="true" placeholder="Tell us about your inquiry or how we can help..."></textarea>
+                                </div>
+
+                                <button type="submit" class="w-full bg-iedc-blue text-white py-3 px-6 rounded-lg font-semibold hover:bg-iedc-light-blue transition-colors" data-event="click:handleSubmit" data-implementation="Should validate form and send contact message">
+                                    Send Message
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- @END_COMPONENT: ContactPage -->
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-iedc-gray text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="md:col-span-2">
+                    <div class="flex items-center mb-4">
+                        <div class="w-8 h-8 bg-iedc-blue rounded-lg flex items-center justify-center mr-3">
+                            <i class="fas fa-lightbulb text-white"></i>
+                        </div>
+                        <div>
+                            <div class="text-lg font-bold">IEDC</div>
+                            <div class="text-xs text-gray-400">IEM Salt Lake</div>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 mb-4">
+                        Innovation and Entrepreneurship Development Center at IEM Salt Lake, fostering innovation and entrepreneurship since 2014.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-facebook text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" onclick="showPage('home')" class="text-gray-300 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="#" onclick="showPage('about')" class="text-gray-300 hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="#" onclick="showPage('vision')" class="text-gray-300 hover:text-white transition-colors">Vision</a></li>
+                        <li><a href="#" onclick="showPage('mission')" class="text-gray-300 hover:text-white transition-colors">Mission</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">More Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" onclick="showPage('team')" class="text-gray-300 hover:text-white transition-colors">Team</a></li>
+                        <li><a href="#" onclick="showPage('startups')" class="text-gray-300 hover:text-white transition-colors">Start-ups</a></li>
+                        <li><a href="#" onclick="showPage('gallery')" class="text-gray-300 hover:text-white transition-colors">Gallery</a></li>
+                        <li><a href="#" onclick="showPage('contact')" class="text-gray-300 hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p class="text-gray-400">© 2024 IEDC IEM Salt Lake. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Page navigation functionality
+        (function() {
+            function showPage(pageId) {
+                // Hide all pages
+                const pages = document.querySelectorAll('.page-content');
+                pages.forEach(page => {
+                    page.classList.add('hidden');
+                });
+
+                // Show selected page
+                const targetPage = document.getElementById(pageId + '-page');
+                if (targetPage) {
+                    targetPage.classList.remove('hidden');
+                }
+
+                // Update navigation active state
+                const navLinks = document.querySelectorAll('.nav-link');
+                navLinks.forEach(link => {
+                    link.classList.remove('text-iedc-blue', 'font-semibold');
+                    link.classList.add('text-iedc-gray');
+                });
+
+                // Close mobile menu if open
+                const mobileMenu = document.getElementById('mobile-menu');
+                mobileMenu.classList.add('hidden');
+
+                // Scroll to top
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+
+            function toggleMobileMenu() {
+                const mobileMenu = document.getElementById('mobile-menu');
+                mobileMenu.classList.toggle('hidden');
+            }
+
+            // Make functions globally available
+            window.showPage = showPage;
+            window.toggleMobileMenu = toggleMobileMenu;
+
+            // Initialize - show home page by default
+            showPage('home');
+
+            // Close mobile menu when clicking outside
+            document.addEventListener('click', function(event) {
+                const mobileMenu = document.getElementById('mobile-menu');
+                const menuButton = event.target.closest('[onclick="toggleMobileMenu()"]');
+                
+                if (!mobileMenu.contains(event.target) && !menuButton && !mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        })();
+
+        // TODO: Implement business logic for form submissions, contact handling, and data processing
+        // TODO: Add proper form validation and error handling
+        // TODO: Implement real data binding for dynamic content
+        // TODO: Add analytics and tracking functionality
+    </script>
+</body>
+</html>
