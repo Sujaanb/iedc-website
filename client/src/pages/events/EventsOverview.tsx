@@ -156,7 +156,16 @@ export default function EventsOverview() {
                           </Link>
                         )}
                         
-                        {event.status === 'upcoming' && (
+                        {event.status === 'upcoming' && event.id === 'bengal-e-summit-2025' && (
+                          <Link href={`/events/${event.id}`}>
+                            <div className="flex items-center justify-between p-3 bg-iedc-light-gray rounded-lg hover:bg-gray-200 transition-colors cursor-pointer">
+                              <span className="text-sm font-medium iedc-gray">View Event Details</span>
+                              <ArrowRight className="h-4 w-4 iedc-blue" />
+                            </div>
+                          </Link>
+                        )}
+
+                        {event.status === 'upcoming' && event.id !== 'bengal-e-summit-2025' && (
                           <div className="p-3 bg-blue-50 rounded-lg">
                             <span className="text-sm font-medium text-blue-800">More details coming soon</span>
                           </div>

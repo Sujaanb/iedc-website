@@ -18,7 +18,7 @@ const moreLinks = [
 const innovationLinks = [
   { name: "Start-ups", path: "/innovation/startups" },
   { name: "Patents", path: "/innovation/patents" },
-  { name: "Research Grants", path: "/innovation/grants" },
+  { name: "Sponsored Research", path: "/innovation/grants" },
   { name: "Publications", path: "/innovation/publications" },
   { name: "Projects", path: "/innovation/projects" },
 ];

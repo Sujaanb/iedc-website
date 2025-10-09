@@ -23,7 +23,7 @@ const navigationItems = [
 ];
 
 const innovationSubItems = [
-  { name: "Research Grants", path: "/innovation/grants" },
+  { name: "Sponsored Research", path: "/innovation/grants" },
   { name: "Projects", path: "/innovation/projects" },
   { name: "Patents", path: "/innovation/patents" },
   { name: "Publications", path: "/innovation/publications" },

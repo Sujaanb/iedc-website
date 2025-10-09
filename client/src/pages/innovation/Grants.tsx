@@ -1,158 +1,218 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { User, DollarSign, FileText } from "lucide-react";
+import { User, Building2, Calendar, Clock } from "lucide-react";
 
-const grants = [
+type SponsoredResearch = {
+  title: string;
+  projectLeaders: string;
+  supportingAgency: string;
+  duration: string;
+  status: string;
+};
+
+type AcademicYearData = {
+  year: string;
+  projects: SponsoredResearch[];
+};
+
+const sponsoredResearchData: AcademicYearData[] = [
   {
-    pi: "Dr. Malay Gangopadhyay",
-    title: "AUTONOMOUS MARS ROVER ODDITY",
-    amount: "4 Lakhs",
-  },
-  {
-    pi: "Dr. Malay Gangopadhyay",
-    title: "FABRICATION OF MICROWAVE BIOSENSORS ON UNCONVENTIONAL 3D PRINTED SUBSTRATE",
-    amount: "1 Lakh",
-  },
-  {
-    pi: "Prof. Samit Kamarkar",
-    title: "DESIGN AND DEVELOPMENT OF A LOW-COST PRECISE ELECTROMETER FOR L-V CHARACTERIZATION OF CARBON THIN FILMS",
-    amount: "30 Thousand",
-  },
-  {
-    pi: "Dr. Mili Sarker",
-    title: "SMART ATTENDANCE SYSTEM (GEN 2.0)",
-    amount: "20 Thousand",
-  },
-  {
-    pi: "Dr. Mili Sarker",
-    title: "FABRICATION OF MICROWAVE BIOSENSORS ON UNCONVENTIONAL 3D PRINTED SUBSTRATE",
-    amount: "1.25 Lakhs",
-  },
-  {
-    pi: "Dr. Gobinda Sen",
-    title: "DESIGN AND FABRICATION OF LOW-COST PORTABLE MICROWAVE SENSORS FOR FOOD ADULTERATION DETECTION",
-    amount: "15 Thousand",
-  },
-  {
-    pi: "Prof. Soumik Kumar Kundu",
-    title: "DEVELOPMENT OF AN AI BASED STOCK MARKET ANALYSIS APPLICATION",
-    amount: "20 Thousand",
-  },
-  {
-    pi: "Prof. Soumik Kumar Kundu",
-    title: "AI BASED SMART FARMING FOR ENHANCED AGRICULTURAL PRODUCTIVITY AND SUSTAINABILITY",
-    amount: "8.5 Thousand",
-  },
-  {
-    pi: "Dr. Goutam Ghosh",
-    title: "FALL DETECTION IN PARKINSON'S DISEASE USING WEARABLE SENSORS",
-    amount: "45 Thousand",
-  },
-  {
-    pi: "Dr. Arindam Chakraborty",
-    title: "IOT BASED VOICE-ACTIVATED SMART WHEELCHAIR WITH STAIR-CLIMBING ABILITY FOR PATIENTS HAVING NEUROLOGICAL DISORDERS",
-    amount: "8.5 Thousand",
-  },
-  {
-    pi: "Prof. Amit Kumar Das",
-    title: "SMART SAFETY GLASSES FOR THE VISUALLY COMBINING: INTEGRATING OBJECT DETECTION, SOUND ANALYSIS AND SPEECH RECOGNITION",
-    amount: "75 Thousand",
-  },
-  {
-    pi: "Dr. Sutanu Ghosh",
-    title: "RECONFIGURABLE INTELLIGENT SURFACES FOR NEXT GENERATION WIRELESS COMMUNICATION",
-    amount: "20 Thousand",
-  },
-  {
-    pi: "Prof. Debadoti Ghosh",
-    title: "DESIGN OF A PROTOTYPE OF PYROLYSIS CHAMBER TO CONVERT WASTE PLASTIC INTO FUEL",
-    amount: "1 Lakh",
-  },
-  {
-    pi: "Prof. Anindita Das Bhattacharjee",
-    title: "MULTI MODAL DATA ACQUISITION AND ANALYSIS USING DRONES FOR AGRICULTURE AND ENVIRONMENTAL PRESERVATION",
-    amount: "9 Lakhs",
-  },
-  {
-    pi: "Dr. Mili Sarker",
-    title: "DESIGN AND DEVELOPMENT OF AN EFFICIENT ALU FOR HIGH SPEED AND LOW POWER APPLICATIONS",
-    amount: "8.3 Lakhs",
-  },
-  {
-    pi: "Prof. Soumik Kumar Kundu",
-    title: "SURFACE PROFILE STUDY OF AN IN-HOUSE DEVELOPED METALLIC AND NON-METALLIC THIN FILMS USING A STYLUS-TYPE SURFACE PROFILOMETER",
-    amount: "16 Lakhs",
-  },
-  {
-    pi: "Dr. Indranil Maity",
-    title: "INCORPORATION OF 2D - MATERIAL BASED SOLID STATE GAS SENSOR DEVICES TOWARDS THE APPLICATION OF HEALTHCARE MONITORING SYSTEMS",
-    amount: "7 Lakhs",
-  },
-  {
-    pi: "Prof. Malay Gangopadhyay",
-    title: "WEARABLE ANTENNA DESIGN FOR DEFENSE APPLICATION",
-    amount: "1 Lakh",
-  },
-  {
-    pi: "Dr. Indranil Maity",
-    title: "DESIGN OF DEVELOPMENT OF 2D MATERIALS BASED GAS SENSOR DEVICES FOR EARLY DETECTION OF DIABETES AND NAFLD BIOMARKERS",
-    amount: "80 Thousand",
-  },
-  {
-    pi: "Prof. Debadoti Ghosh",
-    title: "DESIGN OF PYROLYSIS CHAMBER FOR PRODUCING PYROLIZED OIL FROM WASTE PLASTICS DUE TO MAJOR MISHAP",
-    amount: "25 Thousand",
-  },
-  {
-    pi: "Dr. Gobinda Sen",
-    title: "IMPLEMENTATION OF IOT BASED SMART REFRIGERATOR SYSTEM",
-    amount: "25 Thousand",
-  },
-  {
-    pi: "Dr. Ratna Chakraborty",
-    title: "AI BASED WASTE DETECTION AND CLASSIFICATION FOR WATERBODY",
-    amount: "15 Thousand",
-  },
-  {
-    pi: "Dr. Ratna Chakraborty",
-    title: "GUIDANCE BOT FOR VISUALLY IMPAIRED PEOPLE",
-    amount: "2 Lakhs",
-  },
-  {
-    pi: "Dr. Sanghamitra Poddar",
-    title: "DESIGN AND HARDWARE IMPLEMENTATION OF LIGHT WEIGHT CRYPTOGRAPHIC ALGORITHM FOR RESOURCE CONSTRAINED IOT DEVICES AND SENSORS",
-    amount: "16 Lakhs",
-  },
-  {
-    pi: "Dr. G.S. Taki",
-    title: "ENESYTHESIS BY ELECTRON CYCLOTRON RESONANCE (ECR) PLASMA ENHANCED CHEMICAL VAPOUR DEPOSITION TECHNIQUE",
-    amount: "45 Thousand",
-  },
-  {
-    pi: "Dr. G.S. Taki",
-    title: "INVESTIGATION OF MAGNETIC PROPERTIES OF ION BEAM IRRADIATED GRAPHENE AS POTENTIAL SPINTRONIC MATERIAL",
-    amount: "1.5 Lakhs",
-  },
-  {
-    pi: "Prof. Samit Karmakar",
-    title: "PLASMA DIAGNOSTICS AND PREDICTIVE ANALYSIS OF PRESSURE AND TEMPERATURE FOR VARIOUS EXPERIMENTS CARRIED OUT IN ECRPECVD SYSTEM",
-    amount: "50 Thousand",
-  },
-  {
-    pi: "Prof. Soumik Kumar Kundu",
-    title: "PERFORMANCE ENHANCEMENT OF EXISTING INDIGENOUS DC MAGNETRON SPUTTERING SETUP USING HIGH VACUUM SYSTEM FOR DEVELOPING CONTAMINANT FREE NANO-METRIC METALLIC THIN FILM",
-    amount: "16 Lakhs",
+    year: "July 2024 - June 2025",
+    projects: [
+      {
+        title: "Next-Gen Smart Low Cost EV with Cutting-Edge Charging Technology",
+        projectLeaders: "Prof. Rajib Ghosh (PI), Prof. Amit Kumar Das (Co-PI), Prof. Rintu Kumar Gayen (Co-PI), Prof. Mohidur Rahaman (Co-PI)",
+        supportingAgency: "IEM",
+        duration: "2025 to *",
+        status: "Ongoing",
+      },
+      {
+        title: "IoT-Driven Electric Bike with Smart Navigation and Predictive Maintenance",
+        projectLeaders: "Prof. Amit Kumar Das (PI), Prof. Rajib Ghosh (Co-PI), Prof. Rintu Kumar Gayen (Co-PI), Prof. Mohidur Rahaman (Co-PI)",
+        supportingAgency: "IEM",
+        duration: "2025 to *",
+        status: "Ongoing",
+      },
+      {
+        title: "IoT-based Voice-Activated Smart Wheelchair for Patients with Physical Disability",
+        projectLeaders: "Arindam Chakraborty, Arunava Mukhopadhyay, Samit Karmakar",
+        supportingAgency: "IEMUEM Grant-in-Aid Projects",
+        duration: "2024 to 2026",
+        status: "ONGOING",
+      },
+      {
+        title: "IOT Based Voice Activated Smart Wheelchair with Stair climbing Ability for Patients having Neurological Disorders",
+        projectLeaders: "*",
+        supportingAgency: "Institute of Engineering and Management, Grant in Aid scheme",
+        duration: "2024 to 2026",
+        status: "Ongoing",
+      },
+      {
+        title: "Smart Safety Glasses for the Visually Combining: Integrating Object Detection, Sound Analysis and Speech Recognition",
+        projectLeaders: "PI",
+        supportingAgency: "IEM",
+        duration: "2024 to 2026",
+        status: "ongoing",
+      },
+      {
+        title: "loT-Driven Electric Bike with Smart Navigation and Predictive Maintenance",
+        projectLeaders: "PI",
+        supportingAgency: "IEM",
+        duration: "2025 to 2027",
+        status: "ongoing",
+      },
+      {
+        title: "Next-Gen Smart Low Cost EV with Cutting-Edge Charging Technology",
+        projectLeaders: "Co-PI",
+        supportingAgency: "IEM",
+        duration: "2025 to 2027",
+        status: "ongoing",
+      },
+      {
+        title: "Wearable Antenna Design for Defense Application",
+        projectLeaders: "Malay Gangopadhyaya, Ardhendu Kundu, Sayan Sarkar",
+        supportingAgency: "*",
+        duration: "2024 to 2026",
+        status: "ongoing",
+      },
+      {
+        title: "Reconfigurable Intelligent Surfaces (RIS) Using Metasurfaces for 5G, I0T and Smart Applications",
+        projectLeaders: "Malay Gangopadhyaya, Ardhendu Kundu, Sayan Sarkar",
+        supportingAgency: "*",
+        duration: "2024 to 2026",
+        status: "ongoing",
+      },
+      {
+        title: "Design and Fabrication of Pico-Satellite",
+        projectLeaders: "Dr. Murari Shaw",
+        supportingAgency: "*",
+        duration: "2025 to 2026",
+        status: "*",
+      },
+      {
+        title: "Reconfigurable lntelligent Surfaces for next generation wireless communication",
+        projectLeaders: "PI",
+        supportingAgency: "IEM GRANT-IN AID PROJECT FUND",
+        duration: "Sep-24 to 2026",
+        status: "N/A",
+      },
+      {
+        title: "Smart Safety Glasses for the Visually Combining: lntegrating Object Detection, Sound Analysis and Speech Recognition",
+        projectLeaders: "Co PI",
+        supportingAgency: "IEM GRANT-IN AID PROJECT FUND",
+        duration: "Sep-24 to 2026",
+        status: "N/A",
+      },
+      {
+        title: "Development of a smartphone application for remote screening and monitoring of gait and balance issues in the elderly (REGAIn)",
+        projectLeaders: "Co-PI",
+        supportingAgency: "WBDST research project (memo no. 296(Sanc.)/STBT 11012(19)/11/2024-ST SEC)",
+        duration: "2024 to 2027",
+        status: "*",
+      },
+      {
+        title: "IoT-Driven Electric Bike with Smart Navigation and Predictive Maintenance",
+        projectLeaders: "Co-PI",
+        supportingAgency: "IEM",
+        duration: "2025 to 2027",
+        status: "*",
+      },
+      {
+        title: "Next-Gen Smart Low Cost EV with Cutting-Edge Charging Technology",
+        projectLeaders: "Co-PI",
+        supportingAgency: "IEM",
+        duration: "2025 to 2027",
+        status: "*",
+      },
+      {
+        title: "Wearable Antenna Design for Defense Application",
+        projectLeaders: "Malay Gangopadhyaya, Ardhendu Kundu, Sayan Sarkar",
+        supportingAgency: "IEM",
+        duration: "2024 to 2026",
+        status: "ongoing",
+      },
+      {
+        title: "Reconfigurable Intelligent Surfaces (RIS) Using Metasurfaces for 5G, I0T and Smart Applications",
+        projectLeaders: "Malay Gangopadhyaya, Ardhendu Kundu, Sayan Sarkar",
+        supportingAgency: "IEM",
+        duration: "2024 to 2026",
+        status: "ongoing",
+      },
+      {
+        title: "Design and Fabrication of Low-Cost Portable Microwave Sensors for Food Adulteration Detection",
+        projectLeaders: "Gobinda Sen, Ardhendu Kundu and Sayan Sarkar",
+        supportingAgency: "IEM",
+        duration: "2024 to 2026",
+        status: "*",
+      },
+      {
+        title: "Design and Fabrication of Microwave Biosensors on Unconventional 3D Printed Substrate for Medical Diagnosis",
+        projectLeaders: "Srijita Chakraborty, Malay Gangopadhyay and Ardhendu Kundu",
+        supportingAgency: "IEM",
+        duration: "2024 to 2026",
+        status: "*",
+      },
+      {
+        title: "Design and Development of a Low-Cost Precise Electrometer for l-V Characterization of Carbon Thin Films",
+        projectLeaders: "Prof. Samit Kamarkar (Pl) Dr. Mili Sarkar (CO-P|), Prof. Dr. G.S. Taki(CO-Pl)",
+        supportingAgency: "IEM-UEM R&D Grant-in-Aid",
+        duration: "2024 to Ongoing",
+        status: "Ongoing",
+      },
+      {
+        title: "SmartAttendance System (Gen 2.0)",
+        projectLeaders: "Dr. Mili Sarkar (Pl) Prof. Samit Karmakar (CO-PI)",
+        supportingAgency: "IEM-UEM R&D Grant-in-Aid",
+        duration: "2024 to Ongoing",
+        status: "Ongoing",
+      },
+      {
+        title: "IOT-Based Voice-Activated Smart Wheelchair Wth Stair-Climing Ability For Patients Having Neurological Disorders",
+        projectLeaders: "Dr. Anindam Chakraborty (Pl) Prof. Anunava Mukhopadhyay (CO- Pl), Prof. Samit Karmakar (CO-P|)",
+        supportingAgency: "IEM-UEM R&D Grant-in-Aid",
+        duration: "2024 to Ongoing",
+        status: "Ongoing",
+      },
+      {
+        title: "Development of an Ai-based Stock Market Analysis Application lntegrating Mood Monitoring, Geopolitics and lndustry-specific Factors",
+        projectLeaders: "Prof. Soumik Kumar Kundu",
+        supportingAgency: "IEM-UEM R&D Grant-in-Aid",
+        duration: "2024 to Ongoing",
+        status: "Ongoing",
+      },
+      {
+        title: "Al-based Smart Farming for Enhanced Agricultural Productivity and Sustainability",
+        projectLeaders: "Prof. Soumik Kumar Kundu",
+        supportingAgency: "IEM-UEM R&D Grant-in-Aid",
+        duration: "2024 to Ongoing",
+        status: "Ongoing",
+      },
+      {
+        title: "Abot AI, focusing on the root cause analysis of mobility and infrastructure KPIs, working with real-time data, 5G call flow, and considering different use cases",
+        projectLeaders: "Mentorship (joint collaboration between IEM Kolkata and Rebaca Technologies)",
+        supportingAgency: "Rebaca Technologies Pvt. Ltd",
+        duration: "2024 to Present",
+        status: "MoU",
+      },
+      {
+        title: "Deep Learning techniques for Predictions in Complex Time-Sequence based Dynamic Systems (using Transformers and fine-tuning for reasoning ability using Reinforcement Learning)",
+        projectLeaders: "*",
+        supportingAgency: "*",
+        duration: "2025 to *",
+        status: "*",
+      },
+    ],
   },
 ];
 
 export default function InnovationGrants() {
-  // Function to get badge color based on amount
-  const getAmountBadgeColor = (amount: string) => {
-    if (amount.includes("Lakh")) {
-      const value = parseFloat(amount);
-      if (value >= 10) return "bg-green-100 text-green-800";
-      if (value >= 5) return "bg-blue-100 text-blue-800";
-      return "bg-purple-100 text-purple-800";
+  const getStatusColor = (status: string) => {
+    const lowerStatus = status.toLowerCase();
+    if (lowerStatus.includes("ongoing") || lowerStatus.includes("mou")) {
+      return "bg-green-100 text-green-800";
+    }
+    if (lowerStatus.includes("completed")) {
+      return "bg-blue-100 text-blue-800";
     }
     return "bg-gray-100 text-gray-800";
   };
@@ -161,7 +221,7 @@ export default function InnovationGrants() {
     <div>
       <section className="py-16 bg-gradient-to-r from-iedc-blue to-iedc-light-blue text-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-8">Research Grants</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-8">Sponsored Research</h1>
           <p className="text-xl">Funded research projects driving innovation and discovery</p>
           <div className="w-24 h-1 bg-white mx-auto mt-8"></div>
         </div>
@@ -169,57 +229,61 @@ export default function InnovationGrants() {
 
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Summary Statistics */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-            <Card className="bg-iedc-blue text-white">
-              <CardContent className="p-6 text-center">
-                <h3 className="text-2xl font-bold mb-2">{grants.length}</h3>
-                <p className="text-lg">Total Projects</p>
-              </CardContent>
-            </Card>
-            <Card className="bg-iedc-light-blue text-white">
-              <CardContent className="p-6 text-center">
-                <h3 className="text-2xl font-bold mb-2">20+</h3>
-                <p className="text-lg">Principal Investigators</p>
-              </CardContent>
-            </Card>
-            <Card className="bg-iedc-gray text-white">
-              <CardContent className="p-6 text-center">
-                <h3 className="text-2xl font-bold mb-2">75+</h3>
-                <p className="text-lg">Lakhs Total Funding</p>
-              </CardContent>
-            </Card>
-          </div>
+          {sponsoredResearchData.map((yearData, yearIndex) => (
+            <div key={yearIndex} className="mb-12">
+              <div className="mb-8">
+                <h2 className="text-3xl font-bold text-gray-800 mb-2">
+                  Academic Year: {yearData.year}
+                </h2>
+                <div className="w-20 h-1 bg-iedc-blue"></div>
+                <p className="text-gray-600 mt-2">{yearData.projects.length} Projects</p>
+              </div>
 
-          {/* Grants Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {grants.map((grant, index) => (
-              <Card key={index} className="shadow-md hover:shadow-lg transition-shadow border-l-4 border-iedc-blue">
-                <CardContent className="p-6">
-                  <div className="mb-4">
-                    <Badge className={`mb-3 ${getAmountBadgeColor(grant.amount)}`}>
-                      <DollarSign className="w-3 h-3 mr-1" />
-                      ₹{grant.amount}
-                    </Badge>
-                  </div>
-                  
-                  <h3 className="text-lg font-bold iedc-gray mb-4 line-clamp-3">
-                    {grant.title}
-                  </h3>
-                  
-                  <div className="space-y-3">
-                    <div className="flex items-start">
-                      <User className="iedc-blue h-4 w-4 mt-1 mr-2 flex-shrink-0" />
-                      <div>
-                        <p className="text-sm font-medium text-gray-700">Principal Investigator</p>
-                        <p className="text-sm text-gray-600">{grant.pi}</p>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {yearData.projects.map((project, index) => (
+                  <Card key={index} className="shadow-md hover:shadow-lg transition-shadow border-l-4 border-iedc-blue">
+                    <CardContent className="p-6">
+                      <div className="mb-4">
+                        <Badge className={`mb-3 ${getStatusColor(project.status)}`}>
+                          <Clock className="w-3 h-3 mr-1" />
+                          {project.status}
+                        </Badge>
+                        <h3 className="text-lg font-bold text-gray-800 mb-3 line-clamp-3">
+                          {project.title}
+                        </h3>
                       </div>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
+
+                      <div className="space-y-3">
+                        <div className="flex items-start">
+                          <User className="text-iedc-blue h-4 w-4 mt-1 mr-2 flex-shrink-0" />
+                          <div>
+                            <p className="text-sm font-medium text-gray-700">Project Leaders</p>
+                            <p className="text-sm text-gray-600">{project.projectLeaders}</p>
+                          </div>
+                        </div>
+
+                        <div className="flex items-start">
+                          <Building2 className="text-iedc-blue h-4 w-4 mt-1 mr-2 flex-shrink-0" />
+                          <div>
+                            <p className="text-sm font-medium text-gray-700">Supporting Agency</p>
+                            <p className="text-sm text-gray-600">{project.supportingAgency}</p>
+                          </div>
+                        </div>
+
+                        <div className="flex items-start">
+                          <Calendar className="text-iedc-blue h-4 w-4 mt-1 mr-2 flex-shrink-0" />
+                          <div>
+                            <p className="text-sm font-medium text-gray-700">Duration</p>
+                            <p className="text-sm text-gray-600">{project.duration}</p>
+                          </div>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            </div>
+          ))}
         </div>
       </section>
     </div>

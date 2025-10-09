@@ -9,6 +9,7 @@ import About from "@/pages/About";
 import Team from "@/pages/Team";
 import EventsOverview from "@/pages/events/EventsOverview";
 import BengalESummit2024 from "@/pages/events/BengalESummit2024";
+import BengalESummit2025 from "@/pages/events/BengalESummit2025";
 import TechInnovationWorkshop2024 from "@/pages/events/TechInnovationWorkshop2024";
 import StartupPitchCompetition2024 from "@/pages/events/StartupPitchCompetition2024";
 import Gallery from "@/pages/Gallery";
@@ -19,6 +20,9 @@ import InnovationPatents from "@/pages/innovation/Patents";
 import InnovationGrants from "@/pages/innovation/Grants";
 import InnovationPublications from "@/pages/innovation/Publications";
 import InnovationProjects from "@/pages/innovation/Projects";
+import InnovationJournal from "@/pages/innovation/Journal";
+import InnovationConference from "@/pages/innovation/Conference";
+import InnovationBookChapter from "@/pages/innovation/BookChapter";
 
 function Router() {
   return (
@@ -29,6 +33,7 @@ function Router() {
         <Route path="/team" component={Team} />
         <Route path="/events" component={EventsOverview} />
         <Route path="/events/bengal-e-summit-2024" component={BengalESummit2024} />
+        <Route path="/events/bengal-e-summit-2025" component={BengalESummit2025} />
         <Route path="/events/tech-innovation-workshop-2024" component={TechInnovationWorkshop2024} />
         <Route path="/events/startup-pitch-competition-2024" component={StartupPitchCompetition2024} />
         <Route path="/gallery" component={Gallery} />
@@ -37,6 +42,9 @@ function Router() {
         <Route path="/innovation/patents" component={InnovationPatents} />
         <Route path="/innovation/grants" component={InnovationGrants} />
         <Route path="/innovation/publications" component={InnovationPublications} />
+        <Route path="/innovation/publications/journal" component={InnovationJournal} />
+        <Route path="/innovation/publications/conference" component={InnovationConference} />
+        <Route path="/innovation/publications/books" component={InnovationBookChapter} />
         <Route path="/innovation/projects" component={InnovationProjects} />
         <Route component={NotFound} />
       </Switch>

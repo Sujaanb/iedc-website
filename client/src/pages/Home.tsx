@@ -108,7 +108,7 @@ export default function Home() {
             </div>
             <div>
               <div className="text-4xl md:text-5xl font-bold mb-2">25+</div>
-              <div className="text-lg">Research Grants</div>
+              <div className="text-lg">Sponsored Research</div>
             </div>
           </div>
         </div>

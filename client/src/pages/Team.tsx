@@ -63,7 +63,7 @@ const facultyMembers = [
   {
     name: "Dr. Indranil Maity",
     designation: "Associate Professor and Co-Coordinator IEDC ECE",
-    bio: "Collaborates with Dr. Subhabrata Banerjee to manage IEDC activities, focusing on research grants, industry partnerships, and entrepreneurial training.",
+    bio: "Collaborates with Dr. Subhabrata Banerjee to manage IEDC activities, focusing on Sponsored Research, industry partnerships, and entrepreneurial training.",
     image: drIndranilImg,
     icon: Users,
     bgColor: "bg-iedc-light-blue",
