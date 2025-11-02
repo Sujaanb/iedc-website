@@ -13,6 +13,7 @@ A modern full-stack web application for the Innovation and Entrepreneurship Deve
 ## Project Structure
 
 ```
+iedc_website
 ├── client/                 # Frontend React application
 │   ├── src/               # React components and pages
 │   └── index.html         # Main HTML template
